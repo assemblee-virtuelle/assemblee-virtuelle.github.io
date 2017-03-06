@@ -1,2 +1,2 @@
-# grands-voisins.github.io
-Modèles et Documentation opérationnelles pour appli. grands-voisins
+# assemblee-virtuelle.github.io
+Modèles et Documentation opérationnelles pour applications AV
