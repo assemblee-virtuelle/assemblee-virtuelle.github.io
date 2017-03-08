@@ -8,7 +8,7 @@
 @prefix forms: <http://assemblee-virtuelle.github.io/grands-voisins-v2/gv-forms.ttl#> .
 
 @prefix pair: <http://virtual-assembly.org/pair_v2> .
-@prefix gvoi: gvoi:> .
+@prefix gvoi: <http://www.virtual-assembly.org/ontologies/1.0/pair#> .
 
 # form specifications for FOAF Person
 
@@ -51,7 +51,7 @@ forms:topic_interest
 	:fieldAppliesToForm forms:form-Person ;
 	:fieldAppliesToForm forms:form-Organization ;
 	:fieldAppliesToProperty foaf:topic_interest ;
-	:widgetClass form:DBPediaLookup
+	:widgetClass form:DBPediaLookup ;
 	:cardinality "0:*" .
 
 forms:cco-expertise
@@ -77,7 +77,7 @@ dc:subject
         gvoi:building
         gvoi:room
         gvoi:conventionType
-gvio:empoyeesCount
+gvoi:empoyeesCount
 
 	foaf:img # 0:1
 	foaf:depiction # 0:*
