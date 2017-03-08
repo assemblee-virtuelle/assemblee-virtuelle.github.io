@@ -8,7 +8,7 @@
 @prefix forms: <http://assemblee-virtuelle.github.io/grands-voisins-v2/gv-forms.ttl#> .
 
 @prefix pair: <http://virtual-assembly.org/pair_v2> .
-@prefix gvoi: <http://www.virtual-assembly.org/ontologies/1.0/pair#> .
+@prefix gvoi: <http://assemblee-virtuelle.github.io/grands-voisins-v2/gv.owl.ttl#> .
 
 # form specifications for FOAF Person
 
@@ -74,6 +74,8 @@ dc:subject
         gvoi:administrativeName
         gvoi:arrivalDate
 	foaf:homepage
+pair:hasResponsible
+
         gvoi:building
         gvoi:room
         gvoi:conventionType

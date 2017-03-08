@@ -28,6 +28,8 @@ WHERE { GRAPH <file:///home/jmv/data/Non_public/Voisins-sur-site.csv.ttl> {
   FILTER( ?P != foaf:familyName &&
           ?P != foaf:givenName &&
           ?P != foaf:mbox &&
-          ?P != foaf:phone )
+          ?P != foaf:phone &&
+          ?P != <http://vocab.sindice.net/csv/row>
+   )
    BIND (URI(CONCAT( STR(?ORGA), "-org") ) AS ?newURI)
 }}
