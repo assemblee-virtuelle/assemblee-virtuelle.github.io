@@ -88,7 +88,7 @@ Colonnes après sémantisation brute:
 - <http://vocab.sindice.net/csv/rowPosition>
  
 ## Champs ayant trait à l'organisation et à sa gestion par GV
-- <http://dbpedia.org/ontology/longName>
+- administrativeName
 - <urn:gv/contacts/Facebook>
  - <urn:gv/contacts/Linkedin>
 - <http://www.virtual-assembly.org/ontologies/1.0/pair#twitter>
