@@ -22,7 +22,7 @@ WHERE { GRAPH <file:///home/jmv/data/Non_public/Voisins-sur-site.csv.split.ttl> 
   ?PERSON foaf:familyName ?FN ;
           foaf:givenName ?GN ;
           foaf:mbox ?MB ;
-          foaf:phone ?PH .
+          foaf:phone ?PH . }
 
  OPTIONAL {
   ?ORGA  a <http://vocab.sindice.net/csv/Row> ;
