@@ -18,12 +18,13 @@ INSERT { GRAPH <urn:/Voisins/new> {
   ?newURI pair:hasResponsible ?ORGA .
 }}
 WHERE { GRAPH <file:///home/jmv/data/Non_public/Voisins-sur-site.csv.split.ttl> {
-  ?PERSON a <http://vocab.sindice.net/csv/Row> ;
-          foaf:familyName ?FN ;
+ OPTIONAL {
+  ?PERSON foaf:familyName ?FN ;
           foaf:givenName ?GN ;
           foaf:mbox ?MB ;
           foaf:phone ?PH .
 
+ OPTIONAL {
   ?ORGA  a <http://vocab.sindice.net/csv/Row> ;
          ?P ?O .
   FILTER( ?P != foaf:familyName &&
@@ -32,5 +33,6 @@ WHERE { GRAPH <file:///home/jmv/data/Non_public/Voisins-sur-site.csv.split.ttl> 
           ?P != foaf:phone &&
           ?P != <http://vocab.sindice.net/csv/row>
    )
-   BIND (URI(CONCAT( STR(?ORGA), "-org") ) AS ?newURI)
+ }
+ BIND (URI(CONCAT( STR(?ORGA), "-org") ) AS ?newURI)
 }}
