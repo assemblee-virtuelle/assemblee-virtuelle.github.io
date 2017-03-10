@@ -1,0 +1,188 @@
+#Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp 
+        #    using base file:///media/jmv/1245000b-8e13-4635-8925-6bbac44f3768/jmv/src/assemblee-virtuelle.github.io/grands-voisins-v2/onto.ttl
+        
+#  Notation3 generation by
+#       notation3.py,v 1.200 2007/12/11 21:18:08 syosi Exp
+
+#   Base was: file:///media/jmv/1245000b-8e13-4635-8925-6bbac44f3768/jmv/src/assemblee-virtuelle.github.io/grands-voisins-v2/onto.ttl
+     @prefix : <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix gvoi: <http://assemblee-virtuelle.github.io/grands-voisins-v2/gv.owl.ttl#> .
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+    
+    gvoi:administrativeName     a rdf:Property,
+                owl:DatatypeProperty;
+         :comment "???";
+         :domain foaf:Organization;
+         :label "administrative Name"@en;
+         :label "nom administratif"@fr;
+         :range xsd:string .
+    
+    gvoi:arrivalDate     a rdf:Property,
+                owl:DatatypeProperty;
+         :comment "???";
+         :domain foaf:Organization;
+         :label "arrival Date"@en;
+         :label "Date arrivée"@fr;
+         :range xsd:string .
+    
+    gvoi:building     a rdf:Property,
+                owl:DatatypeProperty;
+         :comment "???";
+         :domain foaf:Organization;
+         :label "building"@en;
+         :label "bâtiment"@fr;
+         :range xsd:string .
+    
+    gvoi:conventionType     a rdf:Property,
+                owl:DatatypeProperty;
+         :comment "Structure juridique signature convention";
+         :domain foaf:Organization;
+         :label "convention Type"@en;
+         :label "Type de convention"@fr;
+         :range xsd:string .
+    
+gvoi:empoyeesCount     a rdf:Property,
+                owl:DatatypeProperty;
+:comment "empoyeesCount: erreur dans la tranformation des données; empoyeesCount sera supprimmé de l'ontologie";
+         :domain foaf:Organization;
+         :label "employees Count"@en;
+         :label "nombre d'employés"@en;
+         :range xsd:integer .
+
+    gvoi:employeesCount     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "employees Count"@en;
+         :label "nombre d'employés"@en;
+         :range xsd:integer .
+ 
+    gvoi:linkedin     a rdf:Property,
+                owl:ObjectProperty;
+         :domain foaf:Organization;
+         :label "linkedin";
+         :range foaf:OnLineAccount .
+    
+    gvoi:proposedContribution     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "proposed Contribution"@en;
+         :label "Contribution proposée"@fr;
+         :range xsd:string .
+    
+    gvoi:realisedContribution     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "realised Contribution"@en;
+         :label "contribution réalisée"@fr;
+         :range xsd:string .
+    
+    gvoi:room     a owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "room"@en;
+         :label "espace (salle)"@fr;
+         :range xsd:integer,
+                xsd:string .
+    
+    gvoi:status     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "statut (SUIVI)"@fr;
+         :label "status"@en;
+         :range xsd:string .
+    
+    gvoi:twitter     a rdf:Property,
+                owl:DatatypeProperty,
+                owl:ObjectProperty;
+         :domain foaf:Organization;
+         :label "twitter";
+         :range foaf:OnLineAccount .
+    
+    gvoi:volunteeringProposals     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "volunteering Proposals"@en;
+         :label "propose du Bénévolat"@fr;
+         :range xsd:string .
+    
+    
+    <http://virtual-assembly.org/pair_v2#hasResponsible>     a rdf:Property,
+                owl:ObjectProperty;
+         :domain foaf:Organization;
+         :label "has Responsible"@en;
+         :label "responsable"@fr;
+         :range foaf:Person .
+    
+  
+    <urn:gv/contactsAdresseE-mail2>     a rdf:Property,
+                owl:DatatypeProperty;
+         :comment "Sera supprimé, quand on créera des foaf:Person pour ces colonnes"@fr;
+         :domain foaf:Organization;
+         :label "contacts Adresse E-mail 2"@fr;
+         :range xsd:string .
+    
+    <urn:gv/contactsFacebook>     a rdf:Property,
+                owl:DatatypeProperty,
+                owl:ObjectProperty;
+         :comment "Sera rebaptisé gvoi:facebook , quand on retraitera les données"@fr;
+         :domain foaf:Organization;
+         :label "contacts Facebook"@fr;
+         :range <http://my.com/_range_>,
+                xsd:string .
+    
+    <urn:gv/contactsNomInterlocuteurR%E9f%E9rent2>     a rdf:Property,
+                owl:DatatypeProperty;
+         :comment "Sera supprimé, quand on créera des foaf:Person pour ces colonnes"@fr;
+         :domain foaf:Organization;
+         :label "contacts Nom Interlocuteur Référent 2"@fr;
+         :range xsd:string .
+    
+    <urn:gv/contactsNum%E9roContact2>     a rdf:Property,
+                owl:DatatypeProperty;
+         :comment "Sera supprimé, quand on créera des foaf:Person pour ces colonnes"@fr;
+         :domain foaf:Organization;
+         :label "contacts NuméroContact 2"@fr;
+         :range xsd:integer .
+    
+    <urn:gv/contactsN%B0Arrivee>     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "contacts N° Arrivée"@fr;
+         :range xsd:integer .
+    
+    <urn:gv/contactsPrint>     a rdf:Property,
+                owl:DatatypeProperty;
+         :comment "utilisé pour gestion mises à jour manuelles";
+         :domain foaf:Organization;
+         :label "contacts Print"@fr;
+         :range xsd:string .
+    
+    <urn:gv/contactsPr%E9nomInterlocuteurR%E9f%E9rent2>     a rdf:Property,
+                owl:DatatypeProperty;
+         :comment "Sera supprimé, quand on créera des foaf:Person pour ces colonnes"@fr;
+         :domain foaf:Organization;
+         :label "contacts Prénom Interlocuteur Référent 2"@fr;
+         :range xsd:string .
+    
+    <urn:gv/contactsSiteWeb>     a owl:DatatypeProperty;
+         :comment """différent du foaf:homepage, ça doit être le Site Web perso du contact;
+il faudra alors mettre ça dans le faof:Person lors du prochain traitement du tableur""";
+         :domain foaf:Organization;
+         :label "contacts Site Web"@fr;
+         :range xsd:string .
+
+     gvoi:slack a owl:ObjectProperty;
+         :domain foaf:Organization;
+         :label "contacts Slack"@fr;
+         :range foaf:OnLineAccount .
+  
+    <urn:gv/contactsSlack>     a rdf:Property,
+                owl:ObjectProperty;
+         :comment """lors du prochain traitement du tableur, changer en gvoi:slack""";
+         :domain foaf:Organization;
+         :label "contacts Slack"@fr;
+         :range foaf:OnLineAccount .
+
