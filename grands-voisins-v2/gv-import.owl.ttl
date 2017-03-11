@@ -15,7 +15,8 @@
 @prefix cv: <http://rdfs.org/resume-rdf/cv.rdfs#> .
 
 <>  a owl:Ontology ;
-	rdfs:comment """ Top level Grand Voisins Ontology that imports the rest.""" ;
+	rdfs:comment """ Top level Grand Voisins Ontology that imports the rest."""@en ;
+	rdfs:comment """Ontologie principale Grand Voisins qui importe le reste."""@fr ;
 	owl:imports <gv.owl.ttl> ,
                <gv-dependencies.owl.ttl>
 	       #gv-dependencies.owl.ttl
