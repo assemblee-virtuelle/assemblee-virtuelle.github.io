@@ -45,6 +45,7 @@ forms:form-Person
 
         <urn:gv/contacts/Slack>
 	foaf:birthDate
+	foaf:img
   ) .
 
 forms:topic_interest
