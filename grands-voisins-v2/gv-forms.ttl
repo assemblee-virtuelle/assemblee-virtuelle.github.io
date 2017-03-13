@@ -10,6 +10,8 @@
 @prefix pair: <http://virtual-assembly.org/pair_v2> .
 @prefix gvoi: <http://assemblee-virtuelle.github.io/grands-voisins-v2/gv.owl.ttl#> .
 
+<> foaf:label "Formulaires Grands Voisins: Personne, Orga, etc"@fr .
+
 # form specifications for FOAF Person
 
 forms:form1-Person
@@ -61,6 +63,15 @@ forms:cco-expertise
 	:fieldAppliesToProperty cco:expertise ;
 	:widgetClass form:DBPediaLookup .
 
+forms:givenName--form-Person
+	:fieldAppliesToForm forms:form-Person ;
+	:fieldAppliesToProperty foaf:givenName ;
+        :cardinality :oneOrMore .
+forms:familyName--form-Person
+	:fieldAppliesToForm forms:form-Person ;
+	:fieldAppliesToProperty foaf:familyName ;
+        :cardinality :exactlyOne .
+
 # form specifications for FOAF Organization
 
 forms:form-Organization
@@ -101,6 +112,12 @@ forms:dc_subject
 	:fieldAppliesToForm :form-Organization ;
 	:fieldAppliesToProperty dct:subject ;
 	:widgetClass form:DBPediaLookup .
+
+forms:givenName--form-Project
+	:fieldAppliesToForm forms:form-Project ;
+	:fieldAppliesToProperty foaf:img ;
+        :cardinality :oneOrMore .
+
 
 # form specifications for FOAF Project
 
