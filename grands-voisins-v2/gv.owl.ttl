@@ -13,10 +13,17 @@
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix org:     <http://www.w3.org/ns/org#> .
 
 <>  a owl:Ontology ;
 	rdfs:comment """Vocabulaire RDF Grand Voisins créé à partir des données."""@fr .
-    
+
+# pour éviter une inférence owl:sameClass:
+org:memberOf a owl:ObjectProperty ;
+	:label "membre de"@fr;
+	:range foaf:Organization ;
+	:domain foaf:Agent .
+
     gvoi:administrativeName     a rdf:Property,
                 owl:DatatypeProperty;
          :comment "???";
@@ -112,15 +119,21 @@ gvoi:empoyeesCount     a rdf:Property,
          :label "propose du Bénévolat"@fr;
          :range xsd:string .
     
-    
-    <http://virtual-assembly.org/pair_v2#hasResponsible>     a rdf:Property,
+ # non LOD! 
+ <http://virtual-assembly.org/pair_v2#hasResponsible>     a rdf:Property,
                 owl:ObjectProperty;
          :domain foaf:Organization;
          :label "has Responsible"@en;
          :label "responsable"@fr;
          :range foaf:Person .
-    
-  
+
+# remplacement LOD de pair:hasResponsible  
+org:headOf a owl:ObjectProperty;
+         :domain foaf:Organization;
+         :label "has responsible"@en;
+         :label "responsable"@fr;
+         :range foaf:Person . 
+ 
     <urn:gv/contactsAdresseE-mail2>     a rdf:Property,
                 owl:DatatypeProperty;
          :comment "Sera supprimé, quand on créera des foaf:Person pour ces colonnes"@fr;

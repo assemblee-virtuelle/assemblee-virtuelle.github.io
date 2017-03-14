@@ -3,6 +3,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix cco: <http://purl.org/ontology/cco/core#> .
+@prefix org:        <http://www.w3.org/ns/org#> .
+
 @prefix  form: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
 @prefix      : <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
 @prefix forms: <http://assemblee-virtuelle.github.io/grands-voisins-v2/gv-forms.ttl#> .
@@ -42,6 +44,7 @@ forms:form-Person
 	foaf:topic_interest # 0:*
 	foaf:knows # 0:*
 	foaf:currentProject# 0:*
+org:memberOf
 
 	cco:expertise # 0:*
 
