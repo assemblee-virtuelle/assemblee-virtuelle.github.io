@@ -82,47 +82,80 @@ forms:form-Organization
   form:classDomain foaf:Organization ;
   form:showProperties (
 	# rdfs:label rdfs:comment
-	foaf:name
-	gvoi:administrativeName
-	dc:subject
-	foaf:topic_interest
-	gvoi:conventionType
+	foaf:name #1:1
+	gvoi:administrativeName #1:1
+	dc:subject #1:*
+	foaf:topic_interest # 0:*
+	gvoi:conventionType # 0:*
 	
-	org:headOf
-	org:hasMember
-	gvoi:employeesCount
+	org:headOf #1:*
+	org:hasMember #1:*
+	gvoi:employeesCount #1:*
 	
 	  
-	foaf:homepage
+	foaf:homepage #0:*
 	foaf:phone # 0:*
 	foaf:mbox # 0:*
 	foaf:depiction # 0:*
 	  
-        gvoi:arrivalDate
-        gvoi:building
-        gvoi:room
+        gvoi:arrivalDate #1:1 
+        gvoi:building #1:1
+        gvoi:room # 1:1
 
-        gvoi:proposedContribution
-        gvoi:realisedContribution
+        gvoi:proposedContribution # 0:*
+        gvoi:realisedContribution # 0:*
 
-	gvoi:status
-	gvoi:twitter
-	gvoi:linkedin
+	gvoi:status # 0:*
+	gvoi:twitter # 0:*
+	gvoi:linkedin # 0:*
 
 	foaf:img # 0:1
   ) .
 
+forms:name--form-Organization
+	:fieldAppliesToForm forms:form-Organization ;
+	:fieldAppliesToProperty foaf:name ;
+        :cardinality :exactlyOne .
 
-forms:dc_subject
-	:fieldAppliesToForm :form-Project ;
-	:fieldAppliesToForm :form-Organization ;
-	:fieldAppliesToProperty dct:subject ;
-	:widgetClass form:DBPediaLookup .
+forms:administrativename--form-Organization
+	:fieldAppliesToForm forms:form-Organization ;
+	:fieldAppliesToProperty foaf:administrativename ;
+        :cardinality :exactlyOne .
 
-forms:givenName--form-Project
-	:fieldAppliesToForm forms:form-Project ;
-	:fieldAppliesToProperty foaf:img ;
+forms:subject--form-Organization
+	:fieldAppliesToForm forms:form-Organization ;
+	:fieldAppliesToProperty foaf:subject ;
         :cardinality :oneOrMore .
+
+forms:headOf--form-Organization
+	:fieldAppliesToForm forms:form-Organization ;
+	:fieldAppliesToProperty foaf:heaOof ;
+        :cardinality :oneOrMore .
+
+forms:hasMember--form-Organization
+	:fieldAppliesToForm forms:form-Organization ;
+	:fieldAppliesToProperty foaf:hasMember ;
+        :cardinality :oneOrMore .
+
+forms:employeesCount--form-Organization
+	:fieldAppliesToForm forms:form-Organization ;
+	:fieldAppliesToProperty foaf:employeesCount ;
+        :cardinality :oneOrMore .
+
+forms:arrivalDate--form-Organization
+	:fieldAppliesToForm forms:form-Organization ;
+	:fieldAppliesToProperty foaf:arrivalDate ;
+        :cardinality : exactlyOne .
+
+forms:building--form-Organization
+	:fieldAppliesToForm forms:form-Organization ;
+	:fieldAppliesToProperty foaf:building ;
+        :cardinality :exactlyOne .
+
+forms:room--form-Organization
+	:fieldAppliesToForm forms:form-Organization ;
+	:fieldAppliesToProperty foaf:room ;
+        :cardinality :exactlyOne .
 
 
 # form specifications for FOAF Project
@@ -149,4 +182,15 @@ forms:form-Project
 
 	
   ) .
+
+forms:dc_subject
+	:fieldAppliesToForm :form-Project ;
+	:fieldAppliesToForm :form-Organization ;
+	:fieldAppliesToProperty dct:subject ;
+	:widgetClass form:DBPediaLookup .
+
+forms:givenName--form-Project
+	:fieldAppliesToForm forms:form-Project ;
+	:fieldAppliesToProperty foaf:img ;
+        :cardinality :oneOrMore .
 
