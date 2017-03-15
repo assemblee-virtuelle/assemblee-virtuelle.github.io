@@ -23,6 +23,10 @@ org:memberOf a owl:ObjectProperty ;
 	:label "membre de"@fr;
 	:range foaf:Organization ;
 	:domain foaf:Agent .
+org:hasMember a owl:ObjectProperty ;
+	:label "membres"@fr;
+	:range foaf:Agent
+	:domain foaf:Organization
 
     gvoi:administrativeName     a rdf:Property,
                 owl:DatatypeProperty;
@@ -68,7 +72,7 @@ gvoi:empoyeesCount     a rdf:Property,
                 owl:DatatypeProperty;
          :domain foaf:Organization;
          :label "employees Count"@en;
-         :label "nombre d'employés"@en;
+         :label "nombre d'employés"@fr;
          :range xsd:integer .
  
     gvoi:linkedin     a rdf:Property,
