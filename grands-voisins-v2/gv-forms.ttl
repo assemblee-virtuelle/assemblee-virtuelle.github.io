@@ -48,8 +48,8 @@ forms:form-Person
 
 	cco:expertise # 0:*
 
-        <urn:gv/contacts/Slack>
-	foaf:birthDay
+        gvoi:slack
+	foaf:birthday
 	foaf:img
   ) .
 
@@ -88,7 +88,7 @@ forms:form-Organization
 	foaf:topic_interest
 	gvoi:conventionType
 	
-	pair:hasResponsible
+	org:headOf
 	org:hasMember
 	gvoi:employeesCount
 	
