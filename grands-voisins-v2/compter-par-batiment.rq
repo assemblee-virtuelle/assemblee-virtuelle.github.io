@@ -1,0 +1,12 @@
+prefix gvoi: <http://assemblee-virtuelle.github.io/grands-voisins-v2/gv.owl.ttl#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX fn: <http://www.w3.org/2005/xpath-functions#>
+
+SELECT ?BATIMENT  ( STR(xsd:integer(COUNT(?BATIMENT))) AS ?PAR_BATIMENT )
+WHERE {
+GRAPH ?GR {
+  ?ORGA gvoi:building ?BATIMENT .
+}}
+GROUP BY ?BATIMENT
+ORDER BY fn:lower-case(?BATIMENT)
+
