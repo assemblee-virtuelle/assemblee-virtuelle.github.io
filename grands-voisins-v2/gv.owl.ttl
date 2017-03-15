@@ -23,10 +23,11 @@ org:memberOf a owl:ObjectProperty ;
 	:label "membre de"@fr;
 	:range foaf:Organization ;
 	:domain foaf:Agent .
+
 org:hasMember a owl:ObjectProperty ;
 	:label "membres"@fr;
-	:range foaf:Agent
-	:domain foaf:Organization
+	:range foaf:Agent ;
+	:domain foaf:Organization .
 
     gvoi:administrativeName     a rdf:Property,
                 owl:DatatypeProperty;
