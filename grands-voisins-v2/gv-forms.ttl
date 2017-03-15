@@ -145,7 +145,7 @@ forms:form-Project
 	foaf:isPrimaryTopicOf
 	foaf:depiction
 	#foaf:holdsAccount*
-	foaf:birthday
+	
 
 	
   ) .
