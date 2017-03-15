@@ -164,19 +164,19 @@ forms:form-Project
   a form:specification ;
   form:classDomain foaf:Project ;
   form:showProperties (
-	rdfs:label 
+	rdfs:label #1:1
 	dct:subject
-	foaf:age
-	foaf:birthday
+	foaf:age #1:1
+	foaf:birthday #1:1
 	  
-	foaf:homepage
-	foaf:mbox
+	foaf:homepage #0:*
+	foaf:mbox #0:*
 	org:OrganizationalCollaboration
-	foaf:fundedBy
-	foaf:maker	
+	foaf:fundedBy # 1:*
+	foaf:maker #1:*	
 	
-	foaf:isPrimaryTopicOf
-	foaf:depiction
+	foaf:isPrimaryTopicOf #1:*
+	foaf:depiction #1:*
 	#foaf:holdsAccount*
 	
 
@@ -192,5 +192,40 @@ forms:dc_subject
 forms:givenName--form-Project
 	:fieldAppliesToForm forms:form-Project ;
 	:fieldAppliesToProperty foaf:img ;
+        :cardinality :oneOrMore .
+
+forms:label--form-Project
+	:fieldAppliesToForm forms:form-Project ;
+	:fieldAppliesToProperty foaf:label ;
+        :cardinality :exactlyOne .
+
+forms:age--form-Project
+	:fieldAppliesToForm forms:form-Project ;
+	:fieldAppliesToProperty foaf:age ;
+        :cardinality :exactlyOne .
+
+forms:birthday--form-Project
+	:fieldAppliesToForm forms:form-Project ;
+	:fieldAppliesToProperty foaf:birthday ;
+        :cardinality :exactly .
+
+forms:fundedBy--form-Project
+	:fieldAppliesToForm forms:form-Project ;
+	:fieldAppliesToProperty foaf:fundedBy ;
+        :cardinality :oneOrMore .
+
+forms:maker--form-Project
+	:fieldAppliesToForm forms:form-Project ;
+	:fieldAppliesToProperty foaf:maker ;
+        :cardinality :oneOrMore .
+
+forms:isPrimaryTopicOf--form-Project
+	:fieldAppliesToForm forms:form-Project ;
+	:fieldAppliesToProperty foaf:isPrimaryTopicOf ;
+        :cardinality :oneOrMore .
+
+forms:depediction--form-Project
+	:fieldAppliesToForm forms:form-Project ;
+	:fieldAppliesToProperty foaf:depediction ;
         :cardinality :oneOrMore .
 
