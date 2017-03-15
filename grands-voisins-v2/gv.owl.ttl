@@ -29,6 +29,11 @@ org:hasMember a owl:ObjectProperty ;
 	:range foaf:Agent ;
 	:domain foaf:Organization .
 
+cco:expertise a owl:ObjectProperty ;
+	:label "expert en/de"@fr ;
+	:range xsd:string .
+
+
     gvoi:administrativeName     a rdf:Property,
                 owl:DatatypeProperty;
          :comment "???";
