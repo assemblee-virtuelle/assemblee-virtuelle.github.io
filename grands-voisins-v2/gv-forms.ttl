@@ -44,12 +44,12 @@ forms:form-Person
 	foaf:topic_interest # 0:*
 	foaf:knows # 0:*
 	foaf:currentProject# 0:*
-org:memberOf
+	org:memberOf
 
 	cco:expertise # 0:*
 
         <urn:gv/contacts/Slack>
-	foaf:birthDate
+	foaf:birthDay
 	foaf:img
   ) .
 
@@ -82,31 +82,34 @@ forms:form-Organization
   form:classDomain foaf:Organization ;
   form:showProperties (
 	# rdfs:label rdfs:comment
-
-foaf:name
-dc:subject
-
-        gvoi:administrativeName
-        gvoi:arrivalDate
+	foaf:name
+	gvoi:administrativeName
+	dc:subject
+	foaf:topic_interest
+	gvoi:conventionType
+	
+	pair:hasResponsible
+	org:hasMember
+	gvoi:employeesCount
+	
+	  
 	foaf:homepage
-pair:hasResponsible
-
+	foaf:phone # 0:*
+	foaf:mbox # 0:*
+	foaf:depiction # 0:*
+	  
+        gvoi:arrivalDate
         gvoi:building
         gvoi:room
-        gvoi:conventionType
-gvoi:employeesCount
-
-	foaf:img # 0:1
-	foaf:depiction # 0:*
 
         gvoi:proposedContribution
         gvoi:realisedContribution
 
- gvoi:status
- gvoi:twitter
- gvoi:linkedin
+	gvoi:status
+	gvoi:twitter
+	gvoi:linkedin
 
-	foaf:topic_interest
+	foaf:img # 0:1
   ) .
 
 
@@ -128,15 +131,22 @@ forms:form-Project
   a form:specification ;
   form:classDomain foaf:Project ;
   form:showProperties (
-	rdfs:label rdfs:comment
+	rdfs:label 
+	dct:subject
+	foaf:age
+	foaf:birthday
+	  
 	foaf:homepage
-	foaf:maker
 	foaf:mbox
+	org:OrganizationalCollaboration
 	foaf:fundedBy
+	foaf:maker	
+	
 	foaf:isPrimaryTopicOf
 	foaf:depiction
-	foaf:holdsAccount
-	foaf:age
-	dct:subject
+	#foaf:holdsAccount*
+	foaf:birthday
+
+	
   ) .
 
