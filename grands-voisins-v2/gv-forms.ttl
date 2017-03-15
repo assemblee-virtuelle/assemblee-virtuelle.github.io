@@ -145,7 +145,7 @@ forms:employeesCount--form-Organization
 forms:arrivalDate--form-Organization
 	:fieldAppliesToForm forms:form-Organization ;
 	:fieldAppliesToProperty foaf:arrivalDate ;
-        :cardinality : exactlyOne .
+        :cardinality :exactlyOne .
 
 forms:building--form-Organization
 	:fieldAppliesToForm forms:form-Organization ;
