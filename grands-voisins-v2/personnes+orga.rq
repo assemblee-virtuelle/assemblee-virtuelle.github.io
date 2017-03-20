@@ -1,0 +1,30 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+PREFIX fn: <http://www.w3.org/2005/xpath-functions#> 
+
+PREFIX text: <http://jena.apache.org/text#> 
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+
+PREFIX purl: <http://purl.org/dc/elements/1.1/> 
+
+PREFIX gvoi: <http://assemblee-virtuelle.github.io/grands-voisins-v2/gv.owl.ttl#> 
+
+
+
+ SELECT ?uri  ?title ?image ?type ?subject ?building 
+WHERE {   GRAPH ?GR {     ?uri text:query "jean" . 
+{ ?uri rdf:type <http://xmlns.com/foaf/0.1/Organization> } 
+UNION 
+{ ?uri rdf:type <http://xmlns.com/foaf/0.1/Person> }
+OPTIONAL { ?ORGA foaf:name ?title } 
+OPTIONAL { ?ORGA foaf:img ?image } 
+OPTIONAL { ?ORGA rdf:type ?type } 
+OPTIONAL { ?ORGA purl:subject ?subject } 
+OPTIONAL { ?ORGA gvoi:building ?building } 
+FILTER ( ?type != <http://vocab.sindice.net/csv/Row> )
+}} 
+GROUP BY ?uri ?title ?image ?type ?subject ?building
+

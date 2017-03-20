@@ -6,7 +6,7 @@ prefix cco: <http://purl.org/ontology/cco/core#>
 prefix pair: <http://virtual-assembly.org/pair_v2#>
 
 # DELETE { GRAPH <file:///home/jmv/data/Non_public/Voisins-sur-site.csv.split.ttl> {?ORGA ?P ?O .}}
-INSERT { GRAPH <urn:/Voisins/new> {
+INSERT { GRAPH ?newURI {
   ?PERSON a foaf:Person ;
           foaf:familyName ?FN ;
           foaf:givenName ?GN ;
