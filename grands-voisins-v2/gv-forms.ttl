@@ -117,44 +117,44 @@ forms:name--form-Organization
 	:fieldAppliesToProperty foaf:name ;
         :cardinality :exactlyOne .
 
-forms:administrativename--form-Organization
+forms:administrativeName--form-Organization
 	:fieldAppliesToForm forms:form-Organization ;
-	:fieldAppliesToProperty foaf:administrativename ;
+	:fieldAppliesToProperty gvoi:administrativeName ;
         :cardinality :exactlyOne .
 
 forms:subject--form-Organization
 	:fieldAppliesToForm forms:form-Organization ;
-	:fieldAppliesToProperty foaf:subject ;
+	:fieldAppliesToProperty dc:subject ;
         :cardinality :oneOrMore .
 
 forms:headOf--form-Organization
 	:fieldAppliesToForm forms:form-Organization ;
-	:fieldAppliesToProperty foaf:heaOof ;
+	:fieldAppliesToProperty org:headOf ;
         :cardinality :oneOrMore .
 
 forms:hasMember--form-Organization
 	:fieldAppliesToForm forms:form-Organization ;
-	:fieldAppliesToProperty foaf:hasMember ;
+	:fieldAppliesToProperty org:hasMember ;
         :cardinality :oneOrMore .
 
 forms:employeesCount--form-Organization
 	:fieldAppliesToForm forms:form-Organization ;
-	:fieldAppliesToProperty foaf:employeesCount ;
+	:fieldAppliesToProperty gvoi:employeesCount ;
         :cardinality :oneOrMore .
 
 forms:arrivalDate--form-Organization
 	:fieldAppliesToForm forms:form-Organization ;
-	:fieldAppliesToProperty foaf:arrivalDate ;
+	:fieldAppliesToProperty gvoi:arrivalDate ;
         :cardinality :exactlyOne .
 
 forms:building--form-Organization
 	:fieldAppliesToForm forms:form-Organization ;
-	:fieldAppliesToProperty foaf:building ;
+	:fieldAppliesToProperty gvoi:building ;
         :cardinality :exactlyOne .
 
 forms:room--form-Organization
 	:fieldAppliesToForm forms:form-Organization ;
-	:fieldAppliesToProperty foaf:room ;
+	:fieldAppliesToProperty gvoi:room ;
         :cardinality :exactlyOne .
 
 
@@ -189,14 +189,9 @@ forms:dc_subject
 	:fieldAppliesToProperty dct:subject ;
 	:widgetClass form:DBPediaLookup .
 
-forms:givenName--form-Project
-	:fieldAppliesToForm forms:form-Project ;
-	:fieldAppliesToProperty foaf:img ;
-        :cardinality :oneOrMore .
-
 forms:label--form-Project
 	:fieldAppliesToForm forms:form-Project ;
-	:fieldAppliesToProperty foaf:label ;
+	:fieldAppliesToProperty rdfs:label ;
         :cardinality :exactlyOne .
 
 forms:age--form-Project
@@ -207,7 +202,7 @@ forms:age--form-Project
 forms:birthday--form-Project
 	:fieldAppliesToForm forms:form-Project ;
 	:fieldAppliesToProperty foaf:birthday ;
-        :cardinality :exactly .
+        :cardinality :exactlyOne .
 
 forms:fundedBy--form-Project
 	:fieldAppliesToForm forms:form-Project ;
@@ -224,8 +219,8 @@ forms:isPrimaryTopicOf--form-Project
 	:fieldAppliesToProperty foaf:isPrimaryTopicOf ;
         :cardinality :oneOrMore .
 
-forms:depediction--form-Project
+forms:depiction--form-Project
 	:fieldAppliesToForm forms:form-Project ;
-	:fieldAppliesToProperty foaf:depediction ;
+	:fieldAppliesToProperty foaf:depiction ;
         :cardinality :oneOrMore .
 
