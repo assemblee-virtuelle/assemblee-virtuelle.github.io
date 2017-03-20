@@ -66,20 +66,21 @@ cco:expertise a owl:ObjectProperty ;
          :label "Type de convention"@fr;
          :range xsd:string .
     
-gvoi:empoyeesCount     a rdf:Property,
-                owl:DatatypeProperty;
-:comment "empoyeesCount: erreur dans la tranformation des données; empoyeesCount sera supprimmé de l'ontologie";
-         :domain foaf:Organization;
-         :label "employees Count"@en;
-         :label "nombre d'employés"@en;
-         :range xsd:integer .
+#gvoi:empoyeesCount     a rdf:Property,
+#                owl:DatatypeProperty;
+#:comment "empoyeesCount: erreur dans la tranformation des données; empoyeesCount sera supprimmé de l'ontologie";
+#         :domain foaf:Organization;
+#         :label "employees Count"@en;
+#         :label "nombre d'employés"@en;
+#         :range xsd:integer .
 
     gvoi:employeesCount     a rdf:Property,
                 owl:DatatypeProperty;
          :domain foaf:Organization;
          :label "employees Count"@en;
          :label "nombre d'employés"@fr;
-         :range xsd:integer .
+         :range xsd:integer,
+		xsd:string.
  
     gvoi:linkedin     a rdf:Property,
                 owl:ObjectProperty;
