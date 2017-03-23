@@ -84,7 +84,7 @@ forms:form-Organization
 	# rdfs:label rdfs:comment
 	foaf:name #1:1
 	gvoi:administrativeName #1:1
-	dc:subject #1:*
+	gvoi:description #1:*
 	foaf:topic_interest # 0:*
 	gvoi:conventionType # 0:*
 	
@@ -167,7 +167,7 @@ forms:form-Project
   form:classDomain foaf:Project ;
   form:showProperties (
 	rdfs:label #1:1
-	dct:subject
+	gvoi:description #1:*
 	foaf:age #1:1
 	foaf:birthday #1:1
 	  
@@ -181,15 +181,13 @@ forms:form-Project
 	foaf:depiction #1:*
 	#foaf:holdsAccount*
 	
-
-	
   ) .
 
-forms:dc_subject
+forms:description--form-Project
 	:fieldAppliesToForm :form-Project ;
 	:fieldAppliesToForm :form-Organization ;
-	:fieldAppliesToProperty dct:subject ;
-	:widgetClass form:DBPediaLookup .
+	:fieldAppliesToProperty gvoi:description ;
+	:cardinality :exactlyOne .
 
 forms:label--form-Project
 	:fieldAppliesToForm forms:form-Project ;
