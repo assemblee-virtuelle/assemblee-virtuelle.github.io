@@ -50,7 +50,7 @@ foaf:homepage a	owl:DatatypeProperty,
 	:label "Site web"@fr;
 	:range xsd:string .
 
-dc:subject a	owl:DatatypeProperty,
+dct:subject a	owl:DatatypeProperty,
 		owl:ObjectProperty ;
 	:label "Commentaire"@fr;
 	:range xsd:string .
