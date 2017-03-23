@@ -14,6 +14,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:    <http://xmlns.com/foaf/0.1/> .
 @prefix org:     <http://www.w3.org/ns/org#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 
 <>  a owl:Ontology ;
 	rdfs:comment """Vocabulaire RDF Grand Voisins créé à partir des données."""@fr .
@@ -33,6 +34,17 @@ cco:expertise a owl:ObjectProperty ;
 	:label "expert en/de"@fr ;
 	:range xsd:string .
 
+foaf:phone a owl:ObjectProperty ;
+	:label "Téléphonne"@fr;
+	:range xsd:string .
+
+foaf:mbox a	owl:ObjectProperty ;
+	:label "E-mail"@fr;
+	:range xsd:string .
+
+dc:subject a owl:ObjectProperty ;
+	:label "Commentaire"@fr;
+	:range xsd:string .
 
     gvoi:administrativeName     a rdf:Property,
                 owl:DatatypeProperty;
@@ -83,6 +95,7 @@ cco:expertise a owl:ObjectProperty ;
 		xsd:string.
  
     gvoi:linkedin     a rdf:Property,
+		owl:DatatypeProperty,
                 owl:ObjectProperty;
          :domain foaf:Organization;
          :label "linkedin";
@@ -121,6 +134,13 @@ cco:expertise a owl:ObjectProperty ;
                 owl:ObjectProperty;
          :domain foaf:Organization;
          :label "twitter";
+         :range foaf:OnLineAccount .
+
+    gvoi:facebook     a rdf:Property,
+                owl:DatatypeProperty,
+                owl:ObjectProperty;
+         :domain foaf:Organization;
+         :label "facebook";
          :range foaf:OnLineAccount .
     
     gvoi:volunteeringProposals     a rdf:Property,
