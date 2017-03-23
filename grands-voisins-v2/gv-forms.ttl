@@ -104,10 +104,12 @@ forms:form-Organization
 
         gvoi:proposedContribution # 0:*
         gvoi:realisedContribution # 0:*
+	gvoi:volunteeringProposals # 0:*
 
 	gvoi:status # 0:*
 	gvoi:twitter # 0:*
 	gvoi:linkedin # 0:*
+	gvoi:facebook # 0:*
 
 	foaf:img # 0:1
   ) .
