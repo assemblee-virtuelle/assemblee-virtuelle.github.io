@@ -34,15 +34,18 @@ cco:expertise a owl:ObjectProperty ;
 	:label "expert en/de"@fr ;
 	:range xsd:string .
 
-foaf:phone a owl:ObjectProperty ;
+foaf:phone a 	owl:DatatypeProperty,
+		owl:ObjectProperty ;
 	:label "Téléphonne"@fr;
 	:range xsd:string .
 
-foaf:mbox a	owl:ObjectProperty ;
+foaf:mbox a	owl:DatatypeProperty,
+		owl:ObjectProperty ;
 	:label "E-mail"@fr;
 	:range xsd:string .
 
-dc:subject a owl:ObjectProperty ;
+dc:subject a 	owl:DatatypeProperty,
+		owl:ObjectProperty ;
 	:label "Commentaire"@fr;
 	:range xsd:string .
 
