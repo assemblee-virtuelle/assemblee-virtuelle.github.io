@@ -35,7 +35,7 @@ cco:expertise a owl:ObjectProperty ;
 
 foaf:phone a 	owl:DatatypeProperty,
 		owl:ObjectProperty ;
-	:label "Téléphonne"@fr;
+	:label "Téléphone"@fr;
 	:range xsd:string .
 
 foaf:mbox a	owl:DatatypeProperty,
@@ -58,7 +58,7 @@ foaf:homepage a	owl:DatatypeProperty,
 
     gvoi:administrativeName     a rdf:Property,
                 owl:DatatypeProperty;
-         :comment "???";
+         :comment "nom Administatif";
          :domain foaf:Organization;
          :label "administrative Name"@en;
          :label "nom administratif"@fr;
@@ -66,7 +66,7 @@ foaf:homepage a	owl:DatatypeProperty,
     
     gvoi:arrivalDate     a rdf:Property,
                 owl:DatatypeProperty;
-         :comment "???";
+         :comment "Date d'arrivée du sujet";
          :domain foaf:Organization;
          :label "arrival Date"@en;
          :label "Date arrivée"@fr;
@@ -74,7 +74,7 @@ foaf:homepage a	owl:DatatypeProperty,
     
     gvoi:building     a rdf:Property,
                 owl:DatatypeProperty;
-         :comment "???";
+         :comment "Bâtiment auquel vous êtes situé";
          :domain foaf:Organization;
          :label "building"@en;
          :label "bâtiment"@fr;
