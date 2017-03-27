@@ -4,6 +4,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix cco: <http://purl.org/ontology/cco/core#> .
 @prefix org:        <http://www.w3.org/ns/org#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#>.
 
 @prefix  form: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
 @prefix      : <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
@@ -151,6 +152,8 @@ forms:arrivalDate--form-Organization
 
 forms:building--form-Organization
 	:fieldAppliesToForm forms:form-Organization ;
+	:fieldAppliesToForm forms:form-Event ;
+	:fieldAppliesToForm forms:form-Proposition ;
 	:fieldAppliesToProperty gvoi:building ;
         :cardinality :exactlyOne .
 
@@ -186,6 +189,8 @@ forms:form-Project
 forms:description--form-Project
 	:fieldAppliesToForm :form-Project ;
 	:fieldAppliesToForm :form-Organization ;
+	:fieldAppliesToForm :form-Event ;
+	:fieldAppliesToForm :form-Prposition ;
 	:fieldAppliesToProperty gvoi:description ;
 	:cardinality :exactlyOne .
 
@@ -206,11 +211,14 @@ forms:birthday--form-Project
 
 forms:fundedBy--form-Project
 	:fieldAppliesToForm forms:form-Project ;
+	:fieldAppliesToForm forms:form-Event ;
+	:fieldAppliesToForm forms:form-Proposition ;
 	:fieldAppliesToProperty foaf:fundedBy ;
         :cardinality :oneOrMore .
 
 forms:maker--form-Project
 	:fieldAppliesToForm forms:form-Project ;
+	:fieldAppliesToForm forms:form-Event;
 	:fieldAppliesToProperty foaf:maker ;
         :cardinality :oneOrMore .
 
@@ -224,3 +232,31 @@ forms:depiction--form-Project
 	:fieldAppliesToProperty foaf:depiction ;
         :cardinality :oneOrMore .
 
+forms:form-Event
+  a form:specification ;
+  form:classDomain event:Event ;
+  form:showProperties (
+	rdfs:label #1:1
+	gvoi:description #1:*
+	foaf:mbox #0:*
+	foaf:fundedBy # 1:* 
+	gvoi:building #1:1
+        gvoi:room # 1:1	
+	foaf:maker #1:*
+	org:OrganizationalCollaboration
+	foaf:topic_interest # 0:*
+	event:sub_event
+	  ) .
+
+forms:form-Proposition
+  a form:specification ;
+  form:showProperties (
+	foaf:fundedBy # 1:* 
+	foaf:mbox #0:*
+	rdfs:label #1:1
+	gvoi:description #1:*
+	gvoi:building #1:1
+        gvoi:room # 1:1	
+	foaf:topic_interest # 0:*
+	  ) .
+	  
