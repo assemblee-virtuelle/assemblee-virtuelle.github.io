@@ -5,6 +5,7 @@
 @prefix cco: <http://purl.org/ontology/cco/core#> .
 @prefix org:        <http://www.w3.org/ns/org#> .
 @prefix event: <http://purl.org/NET/c4dm/event.owl#>.
+@prefix fipa: <http://www.fipa.org/schemas#>.
 
 @prefix  form: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
 @prefix      : <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
@@ -250,6 +251,7 @@ forms:form-Event
 
 forms:form-Proposition
   a form:specification ;
+  form:classDomain fipa:Proposition ;
   form:showProperties (
 	foaf:fundedBy # 1:* 
 	foaf:mbox #0:*
