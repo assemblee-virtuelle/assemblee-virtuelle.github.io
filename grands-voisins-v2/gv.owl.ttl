@@ -232,7 +232,9 @@ il faudra alors mettre ça dans le faof:Person lors du prochain traitement du ta
          :label "contacts Site Web"@fr;
          :range xsd:string .
 
-     gvoi:slack a owl:ObjectProperty;
+     gvoi:slack a a rdf:Property,
+		  owl:DatatypeProperty,
+		  owl:ObjectProperty;
          :domain foaf:Organization;
          :label "contacts Slack"@fr;
          :range foaf:OnLineAccount .
