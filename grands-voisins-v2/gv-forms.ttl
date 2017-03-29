@@ -37,11 +37,12 @@ forms:form-Person
   form:showProperties (
 	foaf:givenName # 1-*
 	foaf:familyName # 1
-
+	gvoi:postalCode
+	gvoi:city
+	  
 	foaf:homepage # 0:*
 	foaf:mbox # 0:*
 	foaf:phone # 0:*
-
 
 	foaf:topic_interest # 0:*
 	foaf:knows # 0:*
@@ -59,8 +60,7 @@ forms:topic_interest
 	:fieldAppliesToForm forms:form-Person ;
 	:fieldAppliesToForm forms:form-Organization ;
 	:fieldAppliesToProperty foaf:topic_interest ;
-	:widgetClass form:DBPediaLookup ;
-	:cardinality "0:*" .
+	:widgetClass form:DBPediaLookup .
 
 forms:cco-expertise
 	:fieldAppliesToForm forms:form-Person ;
@@ -68,10 +68,22 @@ forms:cco-expertise
 	:fieldAppliesToProperty cco:expertise ;
 	:widgetClass form:DBPediaLookup .
 
+forms:postalCode--form-Person
+	:fieldAppliesToForm forms:form-Person ;
+	:fieldAppliesToProperty gvoi:postalCode ;
+        :cardinality :zeroOrOne .
+
+forms:city--form-Person
+	:fieldAppliesToForm forms:form-Person ;
+	:fieldAppliesToProperty gvoi:city ;
+        :cardinality :zeroOrOne ;
+	:widgetClass form:DBPediaLookup .
+
 forms:givenName--form-Person
 	:fieldAppliesToForm forms:form-Person ;
 	:fieldAppliesToProperty foaf:givenName ;
         :cardinality :oneOrMore .
+
 forms:familyName--form-Person
 	:fieldAppliesToForm forms:form-Person ;
 	:fieldAppliesToProperty foaf:familyName ;
@@ -90,6 +102,7 @@ forms:form-Organization
 	foaf:topic_interest # 0:*
 	gvoi:conventionType # 0:*
 	
+	gvoi:isReferencedBy
 	org:headOf #1:*
 	org:hasMember #1:*
 	gvoi:employeesCount #1:*
@@ -119,6 +132,11 @@ forms:form-Organization
 forms:name--form-Organization
 	:fieldAppliesToForm forms:form-Organization ;
 	:fieldAppliesToProperty foaf:name ;
+        :cardinality :exactlyOne .
+
+forms:isReferencedBy--form-Organization
+	:fieldAppliesToForm forms:form-Organization ;
+	:fieldAppliesToProperty gvoi:isReferencedBy ;
         :cardinality :exactlyOne .
 
 forms:administrativeName--form-Organization
@@ -172,14 +190,14 @@ forms:form-Project
   form:showProperties (
 	rdfs:label #1:1
 	gvoi:description #1:*
-	foaf:age #1:1
-	foaf:birthday #1:1
-	  
-	foaf:homepage #0:*
-	foaf:mbox #0:*
-	org:OrganizationalCollaboration
 	foaf:fundedBy # 1:*
 	foaf:maker #1:*	
+        org:OrganizationalCollaboration
+	gvoi:projectStart
+	gvoi:building #1:1
+        gvoi:room # 1:1
+	foaf:homepage #0:*
+	foaf:mbox #0:*
 	
 	foaf:isPrimaryTopicOf #1:*
 	foaf:depiction #1:*
@@ -195,19 +213,14 @@ forms:description--form-Project
 	:fieldAppliesToProperty gvoi:description ;
 	:cardinality :exactlyOne .
 
+forms:projectStart--form-Project
+	:fieldAppliesToForm forms:form-Project ;
+	:fieldAppliesToProperty gvoi:projectStart ;
+        :cardinality :exactlyOne .
+
 forms:label--form-Project
 	:fieldAppliesToForm forms:form-Project ;
 	:fieldAppliesToProperty rdfs:label ;
-        :cardinality :exactlyOne .
-
-forms:age--form-Project
-	:fieldAppliesToForm forms:form-Project ;
-	:fieldAppliesToProperty foaf:age ;
-        :cardinality :exactlyOne .
-
-forms:birthday--form-Project
-	:fieldAppliesToForm forms:form-Project ;
-	:fieldAppliesToProperty foaf:birthday ;
         :cardinality :exactlyOne .
 
 forms:fundedBy--form-Project
@@ -245,8 +258,9 @@ forms:form-Event
         gvoi:room # 1:1	
 	foaf:maker #1:*
 	org:OrganizationalCollaboration
+	gvoi:eventBegin
+	gvoi:eventEnd
 	foaf:topic_interest # 0:*
-	event:sub_event
 	  ) .
 
 forms:form-Proposition
