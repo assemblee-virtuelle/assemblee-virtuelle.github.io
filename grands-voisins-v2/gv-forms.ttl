@@ -50,7 +50,8 @@ forms:form-Person
 	org:memberOf
 
 	cco:expertise # 0:*
-
+	gvoi:ressouceNeeded
+	gvoi:ressouceProposed
         gvoi:slack
 	foaf:birthday
 	foaf:img
@@ -116,7 +117,8 @@ forms:form-Organization
         gvoi:arrivalDate #1:1 
         gvoi:building #1:1
         gvoi:room # 1:1
-
+	gvoi:ressouceNeeded
+	gvoi:ressouceProposed
         gvoi:proposedContribution # 0:*
         gvoi:realisedContribution # 0:*
 	gvoi:volunteeringProposals # 0:*
@@ -198,7 +200,8 @@ forms:form-Project
         gvoi:room # 1:1
 	foaf:homepage #0:*
 	foaf:mbox #0:*
-	
+	gvoi:ressouceNeeded
+	gvoi:ressouceProposed	
 	foaf:isPrimaryTopicOf #1:*
 	foaf:depiction #1:*
 	#foaf:holdsAccount*
@@ -260,6 +263,8 @@ forms:form-Event
 	org:OrganizationalCollaboration
 	gvoi:eventBegin
 	gvoi:eventEnd
+	gvoi:ressouceNeeded
+	gvoi:ressouceProposed
 	foaf:topic_interest # 0:*
 	  ) .
 
@@ -274,5 +279,25 @@ forms:form-Proposition
 	gvoi:building #1:1
         gvoi:room # 1:1	
 	foaf:topic_interest # 0:*
+	gvoi:ressouceNeeded
+	gvoi:ressouceProposed
 	  ) .
+
+forms:ressouceNeeded--form-Project
+	:fieldAppliesToForm forms:form-Person ;
+	:fieldAppliesToForm forms:form-Organization ;
+	:fieldAppliesToForm forms:form-Project ;
+	:fieldAppliesToForm forms:form-Event ;
+	:fieldAppliesToForm forms:form-Proposition ;
+	:fieldAppliesToProperty gvoi:ressouceNeeded ;
+	:widgetClass form:DBPediaLookup .
+
+forms:ressouceProposed--form-Project
+	:fieldAppliesToForm forms:form-Person ;
+	:fieldAppliesToForm forms:form-Organization ;
+	:fieldAppliesToForm forms:form-Project ;
+	:fieldAppliesToForm forms:form-Event ;
+	:fieldAppliesToForm forms:form-Proposition ;
+	:fieldAppliesToProperty gvoi:ressouceProposed ;
+	:widgetClass form:DBPediaLookup .
 	  
