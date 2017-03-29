@@ -47,6 +47,53 @@ foaf:homepage a	owl:DatatypeProperty,
 		owl:ObjectProperty ;
 	:label "Site web"@fr;
 	:range xsd:string .
+# remplacement LOD de pair:hasResponsible  
+org:headOf a owl:ObjectProperty;
+         :domain foaf:Organization;
+         :label "has responsible"@en;
+         :label "responsable"@fr;
+         :range foaf:Person . 
+
+    gvoi:projectStart     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "Project begin"@en;
+         :label "Début du projet"@fr;
+         :range xsd:dateTime.
+
+    gvoi:eventBegin     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "Event begin"@en;
+         :label "Début de l'événement"@fr;
+         :range xsd:dateTime.
+
+    gvoi:eventEnd     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "End of event"@en;
+         :label "Fin de l'événement"@fr;
+         :range xsd:dateTime.
+
+    gvoi:postalCode     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "Postal code"@en;
+         :label "Code postal"@fr;
+         :range xsd:integer,
+		xsd:string.
+
+    gvoi:city     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "City"@en;
+         :label "Ville"@fr;
+         :range xsd:string.
+
+    gvoi:isReferencedBy a owl:ObjectProperty ;
+	:label "personne référente"@fr;
+	:range foaf:Agent ;
+	:domain foaf:Organization .
 
 
     gvoi:description     a rdf:Property,
@@ -87,14 +134,6 @@ foaf:homepage a	owl:DatatypeProperty,
          :label "convention Type"@en;
          :label "Type de convention"@fr;
          :range xsd:string .
-    
-#gvoi:empoyeesCount     a rdf:Property,
-#                owl:DatatypeProperty;
-#:comment "empoyeesCount: erreur dans la tranformation des données; empoyeesCount sera supprimmé de l'ontologie";
-#         :domain foaf:Organization;
-#         :label "employees Count"@en;
-#         :label "nombre d'employés"@en;
-#         :range xsd:integer .
 
     gvoi:employeesCount     a rdf:Property,
                 owl:DatatypeProperty;
@@ -159,7 +198,14 @@ foaf:homepage a	owl:DatatypeProperty,
          :label "volunteering Proposals"@en;
          :label "propose du Bénévolat"@fr;
          :range xsd:string .
-    
+
+    gvoi:slack a rdf:Property,
+		  owl:DatatypeProperty,
+		  owl:ObjectProperty;
+         :domain foaf:Organization;
+         :label "contacts Slack"@fr;
+         :range foaf:OnLineAccount . 
+
  # non LOD! 
  <http://virtual-assembly.org/pair_v2#hasResponsible>     a rdf:Property,
                 owl:ObjectProperty;
@@ -168,12 +214,7 @@ foaf:homepage a	owl:DatatypeProperty,
          :label "responsable"@fr;
          :range foaf:Person .
 
-# remplacement LOD de pair:hasResponsible  
-org:headOf a owl:ObjectProperty;
-         :domain foaf:Organization;
-         :label "has responsible"@en;
-         :label "responsable"@fr;
-         :range foaf:Person . 
+
  
     <urn:gv/contactsAdresseE-mail2>     a rdf:Property,
                 owl:DatatypeProperty;
@@ -232,12 +273,7 @@ il faudra alors mettre ça dans le faof:Person lors du prochain traitement du ta
          :label "contacts Site Web"@fr;
          :range xsd:string .
 
-     gvoi:slack a a rdf:Property,
-		  owl:DatatypeProperty,
-		  owl:ObjectProperty;
-         :domain foaf:Organization;
-         :label "contacts Slack"@fr;
-         :range foaf:OnLineAccount .
+
   
     <urn:gv/contactsSlack>     a rdf:Property,
                 owl:ObjectProperty;
