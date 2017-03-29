@@ -14,6 +14,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:    <http://xmlns.com/foaf/0.1/> .
 @prefix org:     <http://www.w3.org/ns/org#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#>.
 
 <>  a owl:Ontology ;
 	rdfs:comment """Vocabulaire RDF Grand Voisins créé à partir des données."""@fr .
@@ -56,28 +57,28 @@ org:headOf a owl:ObjectProperty;
 
     gvoi:projectStart     a rdf:Property,
                 owl:DatatypeProperty;
-         :domain foaf:Organization;
+         :domain foaf:Project;
          :label "Project begin"@en;
          :label "Début du projet"@fr;
          :range xsd:dateTime.
 
     gvoi:eventBegin     a rdf:Property,
                 owl:DatatypeProperty;
-         :domain foaf:Organization;
+         :domain event:Event;
          :label "Event begin"@en;
          :label "Début de l'événement"@fr;
          :range xsd:dateTime.
 
     gvoi:eventEnd     a rdf:Property,
                 owl:DatatypeProperty;
-         :domain foaf:Organization;
+         :domain event:Event;
          :label "End of event"@en;
          :label "Fin de l'événement"@fr;
          :range xsd:dateTime.
 
     gvoi:postalCode     a rdf:Property,
                 owl:DatatypeProperty;
-         :domain foaf:Organization;
+         :domain foaf:Person;
          :label "Postal code"@en;
          :label "Code postal"@fr;
          :range xsd:integer,
@@ -85,7 +86,7 @@ org:headOf a owl:ObjectProperty;
 
     gvoi:city     a rdf:Property,
                 owl:DatatypeProperty;
-         :domain foaf:Organization;
+         :domain foaf:Person;
          :label "City"@en;
          :label "Ville"@fr;
          :range xsd:string.
