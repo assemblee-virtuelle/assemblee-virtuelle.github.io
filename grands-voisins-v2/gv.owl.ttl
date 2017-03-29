@@ -55,6 +55,28 @@ org:headOf a owl:ObjectProperty;
          :label "responsable"@fr;
          :range foaf:Person . 
 
+    gvoi:ressouceNeeded     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "Resources you need"@en;
+         :label "Ressources que vous avez besoin"@fr;
+         :range xsd:string .
+
+    gvoi:ressouceProposed     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "Resources you can share"@en;
+         :label "Ressources que vous pouvez mettre à disposition"@fr;
+         :range xsd:string .
+
+
+    gvoi:proposedContribution     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "proposed Contribution"@en;
+         :label "Contribution proposée"@fr;
+         :range xsd:string .
+
     gvoi:projectStart     a rdf:Property,
                 owl:DatatypeProperty;
          :domain foaf:Project;
@@ -91,11 +113,10 @@ org:headOf a owl:ObjectProperty;
          :label "Ville"@fr;
          :range xsd:string.
 
-    gvoi:isReferencedBy a owl:ObjectProperty ;
+    gvoi:hasReferent a owl:ObjectProperty ;
 	:label "personne référente"@fr;
 	:range foaf:Agent ;
 	:domain foaf:Organization .
-
 
     gvoi:description     a rdf:Property,
                 owl:DatatypeProperty;
