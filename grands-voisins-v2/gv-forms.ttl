@@ -77,7 +77,7 @@ forms:postalCode--form-Person
 forms:city--form-Person
 	:fieldAppliesToForm forms:form-Person ;
 	:fieldAppliesToProperty gvoi:city ;
-        :cardinality :zeroOrOne ;
+        :cardinality :exactlyOne ;
 	:widgetClass form:DBPediaLookup .
 
 forms:givenName--form-Person
