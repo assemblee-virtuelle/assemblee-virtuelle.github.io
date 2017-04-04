@@ -38,7 +38,7 @@ forms:form-Person
 	foaf:givenName # 1-*
 	foaf:familyName # 1
 	gvoi:postalCode
-	gvoi:city
+	#gvoi:city
 	gvoi:newCity 
 	foaf:homepage # 0:*
 	foaf:mbox # 0:*
