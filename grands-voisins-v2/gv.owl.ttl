@@ -104,14 +104,14 @@ org:headOf a owl:ObjectProperty;
          :label "Postal code"@en;
          :label "Code postal"@fr;
          :range xsd:integer,
-		xsd:string.
+		xsd:string .
 
-    gvoi:city     a rdf:Property,
-                owl:DatatypeProperty;
-         :domain foaf:Person;
-         :label "City"@en;
-         :label "Ville"@fr;
-         :range xsd:string.
+    gvoi:city	a rdf:Property,
+		owl:DatatypeProperty ;
+         :domain foaf:Person ;
+         :label "City"@en ;
+         :label "Ville"@fr ;
+         :range xsd:string .
 
     gvoi:hasReferent a owl:ObjectProperty ;
 	:label "personne référente"@fr;
