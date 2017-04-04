@@ -106,6 +106,14 @@ org:headOf a owl:ObjectProperty;
          :range xsd:integer,
 		xsd:string .
 
+    gvoi:newCity     a rdf:Property,
+                owl:DatatypeProperty;
+         :comment "test pour city";
+         :domain foaf:Organization;
+         :label "City"@en;
+         :label "Ville"@fr;
+         :range xsd:string .
+
     gvoi:city	a rdf:Property,
 		owl:DatatypeProperty ;
          :domain foaf:Person ;
