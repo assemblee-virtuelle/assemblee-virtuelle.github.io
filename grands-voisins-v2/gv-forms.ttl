@@ -74,11 +74,10 @@ forms:postalCode--form-Person
 	:fieldAppliesToProperty gvoi:postalCode ;
         :cardinality :zeroOrOne .
 
-#forms:city--form-Person
-#	:fieldAppliesToForm forms:form-Person ;
-#	:fieldAppliesToProperty gvoi:city ;
-#       :cardinality :exactlyOne ;
-#	:widgetClass form:DBPediaLookup .
+forms:city--form-Person
+	:fieldAppliesToForm forms:form-Person ;
+	:fieldAppliesToProperty gvoi:city ;
+	:widgetClass form:DBPediaLookup .
 
 forms:givenName--form-Person
 	:fieldAppliesToForm forms:form-Person ;
