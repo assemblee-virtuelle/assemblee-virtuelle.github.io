@@ -74,11 +74,6 @@ forms:postalCode--form-Person
 	:fieldAppliesToProperty gvoi:postalCode ;
         :cardinality :zeroOrOne .
 
-forms:city--form-Person
-	:fieldAppliesToForm forms:form-Person ;
-	:fieldAppliesToProperty gvoi:city ;
-	:cardinality :zeroOrOne .
-
 forms:givenName--form-Person
 	:fieldAppliesToForm forms:form-Person ;
 	:fieldAppliesToProperty foaf:givenName ;
