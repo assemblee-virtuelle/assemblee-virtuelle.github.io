@@ -39,7 +39,7 @@ forms:form-Person
 	foaf:familyName # 1
 	gvoi:postalCode
 	gvoi:city
-	  
+	gvoi:newCity 
 	foaf:homepage # 0:*
 	foaf:mbox # 0:*
 	foaf:phone # 0:*
