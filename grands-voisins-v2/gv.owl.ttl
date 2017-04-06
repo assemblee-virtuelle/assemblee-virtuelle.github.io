@@ -56,18 +56,18 @@ org:headOf a owl:ObjectProperty;
          :range foaf:Person . 
 
     gvoi:ressouceNeeded     a rdf:Property,
-                owl:DatatypeProperty;
+                owl:ObjectProperty;
          :domain foaf:Organization;
          :label "Resources you need"@en;
          :label "Ressources que vous avez besoin"@fr;
-         :range xsd:string .
+         :range owl:Thing .
 
     gvoi:ressouceProposed     a rdf:Property,
-                owl:DatatypeProperty;
+                owl:ObjectProperty;
          :domain foaf:Organization;
          :label "Resources you can share"@en;
          :label "Ressources que vous pouvez mettre à disposition"@fr;
-         :range xsd:string .
+         :range owl:Thing .
 
 
     gvoi:proposedContribution     a rdf:Property,
