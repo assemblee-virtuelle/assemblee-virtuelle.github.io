@@ -69,6 +69,13 @@ org:headOf a owl:ObjectProperty;
          :label "Ressources que vous pouvez mettre à disposition"@fr;
          :range owl:Thing .
 
+    gvoi:city     a rdf:Property,
+                owl:ObjectProperty;
+         :domain foaf:Person;
+         :label "City"@en;
+         :label "Ville"@fr;
+         :range owl:Thing .
+
 
     gvoi:proposedContribution     a rdf:Property,
                 owl:DatatypeProperty;
