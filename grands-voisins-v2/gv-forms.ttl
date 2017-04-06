@@ -282,7 +282,8 @@ forms:ressouceNeeded--form-Project
 	:fieldAppliesToForm forms:form-Project ;
 	:fieldAppliesToForm forms:form-Event ;
 	:fieldAppliesToForm forms:form-Proposition ;
-	:fieldAppliesToProperty gvoi:ressouceNeeded .
+	:fieldAppliesToProperty gvoi:ressouceNeeded ;
+	:widgetClass form:DBPediaLookup .
 
 forms:ressouceProposed--form-Project
 	:fieldAppliesToForm forms:form-Person ;
@@ -290,5 +291,6 @@ forms:ressouceProposed--form-Project
 	:fieldAppliesToForm forms:form-Project ;
 	:fieldAppliesToForm forms:form-Event ;
 	:fieldAppliesToForm forms:form-Proposition ;
-	:fieldAppliesToProperty gvoi:ressouceProposed .
+	:fieldAppliesToProperty gvoi:ressouceProposed ;
+	:widgetClass form:DBPediaLookup .
 	  
