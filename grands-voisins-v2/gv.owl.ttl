@@ -21,17 +21,17 @@
 
 # pour éviter une inférence owl:sameClass:
 org:memberOf a owl:ObjectProperty ;
-	:label "membre de"@fr;
+	:label "Membre de"@fr;
 	:range foaf:Organization ;
 	:domain foaf:Agent .
 
 org:hasMember a owl:ObjectProperty ;
-	:label "membres"@fr;
+	:label "Membres"@fr;
 	:range foaf:Agent ;
 	:domain foaf:Organization .
 
 cco:expertise a owl:ObjectProperty ;
-	:label "expert en/de"@fr ;
+	:label "Expert en/de"@fr ;
 	:range xsd:string .
 
 foaf:phone a 	owl:DatatypeProperty,
@@ -51,29 +51,58 @@ foaf:homepage a	owl:DatatypeProperty,
 # remplacement LOD de pair:hasResponsible  
 org:headOf a owl:ObjectProperty;
          :domain foaf:Organization;
-         :label "has responsible"@en;
-         :label "responsable"@fr;
+         :label "Has responsible"@en;
+         :label "Responsable"@fr;
          :range foaf:Person . 
 
     gvoi:ressouceNeeded     a rdf:Property,
-                owl:DatatypeProperty;
+                owl:ObjectProperty;
          :domain foaf:Organization;
          :label "Resources you need"@en;
          :label "Ressources que vous avez besoin"@fr;
-         :range xsd:string .
+         :range owl:Thing .
 
     gvoi:ressouceProposed     a rdf:Property,
-                owl:DatatypeProperty;
+                owl:ObjectProperty;
          :domain foaf:Organization;
          :label "Resources you can share"@en;
          :label "Ressources que vous pouvez mettre à disposition"@fr;
-         :range xsd:string .
+         :range owl:Thing .
 
+    gvoi:city     a rdf:Property,
+                owl:ObjectProperty;
+         :domain foaf:Person;
+         :label "City"@en;
+         :label "Ville"@fr;
+         :range owl:Thing . 
+
+    gvoi:arrivalNumber     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "Arrival number"@en;
+         :label "Numéro d'arrivée"@fr;
+         :range xsd:integer,
+		xsd:string .
+
+    gvoi:insuranceStatus     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "Inssurance statuts"@en;
+         :label "Statut de l'assurance"@fr;
+         :range xsd:integer,
+		xsd:string .
+
+    gvoi:haveBenefitOf     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "Have benefit of"@en;
+         :label "A bénéficier de"@fr;
+         :range xsd:string .
 
     gvoi:proposedContribution     a rdf:Property,
                 owl:DatatypeProperty;
          :domain foaf:Organization;
-         :label "proposed Contribution"@en;
+         :label "Proposed Contribution"@en;
          :label "Contribution proposée"@fr;
          :range xsd:string .
 
@@ -104,17 +133,10 @@ org:headOf a owl:ObjectProperty;
          :label "Postal code"@en;
          :label "Code postal"@fr;
          :range xsd:integer,
-		xsd:string.
-
-    gvoi:city     a rdf:Property,
-                owl:DatatypeProperty;
-         :domain foaf:Person;
-         :label "City"@en;
-         :label "Ville"@fr;
-         :range xsd:string.
+		xsd:string .
 
     gvoi:hasReferent a owl:ObjectProperty ;
-	:label "personne référente"@fr;
+	:label "Personne référente"@fr;
 	:range foaf:Agent ;
 	:domain foaf:Organization .
 
@@ -129,39 +151,63 @@ org:headOf a owl:ObjectProperty;
                 owl:DatatypeProperty;
          :comment "nom Administatif";
          :domain foaf:Organization;
-         :label "administrative Name"@en;
-         :label "nom administratif"@fr;
+         :label "Administrative Name"@en;
+         :label "Nom administratif"@fr;
          :range xsd:string .
     
     gvoi:arrivalDate     a rdf:Property,
                 owl:DatatypeProperty;
          :comment "Date d'arrivée du sujet";
          :domain foaf:Organization;
-         :label "arrival Date"@en;
-         :label "Date arrivée"@fr;
+         :label "Arrival Date"@en;
+         :label "Date d'arrivée"@fr;
          :range xsd:string .
-    
+
+    gvoi:leavingDate     a rdf:Property,
+                owl:DatatypeProperty;
+         :comment "Date de départ du sujet";
+         :domain foaf:Organization;
+         :label "Leaving date"@en;
+         :label "Date de départ"@fr;
+         :range xsd:string .
+
+    gvoi:newLocation     a rdf:Property,
+                owl:DatatypeProperty;
+         :comment "Nouveau lieu de travail";
+         :domain foaf:Organization;
+         :label "New Location"@en;
+         :label "Nouvelle localisation"@fr;
+         :range xsd:string .    
+
     gvoi:building     a rdf:Property,
                 owl:DatatypeProperty;
          :comment "Bâtiment auquel vous êtes situé";
          :domain foaf:Organization;
-         :label "building"@en;
-         :label "bâtiment"@fr;
+         :label "Building"@en;
+         :label "Bâtiment"@fr;
          :range xsd:string .
     
     gvoi:conventionType     a rdf:Property,
                 owl:DatatypeProperty;
          :comment "Structure juridique signature convention";
          :domain foaf:Organization;
-         :label "convention Type"@en;
+         :label "Convention Type"@en;
          :label "Type de convention"@fr;
+         :range xsd:string .
+
+    gvoi:contributionType     a rdf:Property,
+                owl:DatatypeProperty;
+         :comment "Type de contribution";
+         :domain foaf:Organization;
+         :label "contribution Ttpe"@en;
+         :label "Type de contribution"@fr;
          :range xsd:string .
 
     gvoi:employeesCount     a rdf:Property,
                 owl:DatatypeProperty;
          :domain foaf:Organization;
-         :label "employees Count"@en;
-         :label "nombre d'employés"@fr;
+         :label "Employees Count"@en;
+         :label "Nombre d'employés"@fr;
          :range xsd:integer,
 		xsd:string.
  
@@ -169,49 +215,49 @@ org:headOf a owl:ObjectProperty;
 		owl:DatatypeProperty,
                 owl:ObjectProperty;
          :domain foaf:Organization;
-         :label "linkedin";
+         :label "Linkedin";
          :range foaf:OnLineAccount .
     
     gvoi:proposedContribution     a rdf:Property,
                 owl:DatatypeProperty;
          :domain foaf:Organization;
-         :label "proposed Contribution"@en;
+         :label "Proposed Contribution"@en;
          :label "Contribution proposée"@fr;
          :range xsd:string .
     
     gvoi:realisedContribution     a rdf:Property,
                 owl:DatatypeProperty;
          :domain foaf:Organization;
-         :label "realised Contribution"@en;
-         :label "contribution réalisée"@fr;
+         :label "Realised Contribution"@en;
+         :label "Contribution réalisée"@fr;
          :range xsd:string .
     
     gvoi:room     a owl:DatatypeProperty;
          :domain foaf:Organization;
-         :label "room"@en;
-         :label "espace (salle)"@fr;
+         :label "Room"@en;
+         :label "Espace (salle)"@fr;
          :range xsd:integer,
                 xsd:string .
     
     gvoi:status     a rdf:Property,
                 owl:DatatypeProperty;
          :domain foaf:Organization;
-         :label "statut (SUIVI)"@fr;
-         :label "status"@en;
+         :label "Statut (SUIVI)"@fr;
+         :label "Status"@en;
          :range xsd:string .
     
     gvoi:twitter     a rdf:Property,
                 owl:DatatypeProperty,
                 owl:ObjectProperty;
          :domain foaf:Organization;
-         :label "twitter";
+         :label "Twitter";
          :range foaf:OnLineAccount .
 
     gvoi:facebook     a rdf:Property,
                 owl:DatatypeProperty,
                 owl:ObjectProperty;
          :domain foaf:Organization;
-         :label "facebook";
+         :label "Facebook";
          :range foaf:OnLineAccount .
     
     gvoi:volunteeringProposals     a rdf:Property,
@@ -225,15 +271,15 @@ org:headOf a owl:ObjectProperty;
 		  owl:DatatypeProperty,
 		  owl:ObjectProperty;
          :domain foaf:Organization;
-         :label "contacts Slack"@fr;
+         :label "Contacts Slack"@fr;
          :range foaf:OnLineAccount . 
 
  # non LOD! 
  <http://virtual-assembly.org/pair_v2#hasResponsible>     a rdf:Property,
                 owl:ObjectProperty;
          :domain foaf:Organization;
-         :label "has Responsible"@en;
-         :label "responsable"@fr;
+         :label "Has Responsible"@en;
+         :label "Responsable"@fr;
          :range foaf:Person .
 
 
@@ -242,7 +288,7 @@ org:headOf a owl:ObjectProperty;
                 owl:DatatypeProperty;
          :comment "Sera supprimé, quand on créera des foaf:Person pour ces colonnes"@fr;
          :domain foaf:Organization;
-         :label "contacts Adresse E-mail 2"@fr;
+         :label "Contacts Adresse E-mail 2"@fr;
          :range xsd:string .
     
     <urn:gv/contactsFacebook>     a rdf:Property,
