@@ -39,6 +39,7 @@ forms:form-Person
 	foaf:familyName # 1
 	gvoi:postalCode
 	gvoi:city
+	org:headOf
 
 	foaf:homepage # 0:*
 	foaf:mbox # 0:*
@@ -90,6 +91,10 @@ forms:familyName--form-Person
 	:fieldAppliesToProperty foaf:familyName ;
         :cardinality :exactlyOne .
 
+forms:headOf--form-Person
+	:fieldAppliesToForm forms:form-Person ;
+	:fieldAppliesToProperty org:headOf ;
+        :cardinality :oneOrMore .
 # form specifications for FOAF Organization
 
 forms:form-Organization
@@ -105,7 +110,7 @@ forms:form-Organization
 	gvoi:contributionType
 	  
 	gvoi:isReferencedBy
-	org:headOf #1:*
+	org:Head #1:*
 	org:hasMember #1:*
 	gvoi:employeesCount #1:*
 	
@@ -181,9 +186,9 @@ forms:subject--form-Organization
 	:fieldAppliesToProperty dc:subject ;
         :cardinality :oneOrMore .
 
-forms:headOf--form-Organization
+forms:Head--form-Organization
 	:fieldAppliesToForm forms:form-Organization ;
-	:fieldAppliesToProperty org:headOf ;
+	:fieldAppliesToProperty org:Head ;
         :cardinality :oneOrMore .
 
 forms:hasMember--form-Organization
