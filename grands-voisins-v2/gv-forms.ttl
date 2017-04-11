@@ -115,26 +115,41 @@ forms:form-Organization
 	foaf:mbox # 0:*
 	foaf:depiction # 0:*
 	  
-        gvoi:arrivalDate #1:1
-        gvoi:building #1:1
-        gvoi:room # 1:1
+
 	gvoi:ressouceNeeded
 	gvoi:ressouceProposed
         gvoi:proposedContribution # 0:*
         gvoi:realisedContribution # 0:*
 	gvoi:volunteeringProposals # 0:*
 
-	gvoi:status # 0:*
+	
 	gvoi:twitter # 0:*
 	gvoi:linkedin # 0:*
 	gvoi:facebook # 0:*
-
+	foaf:img # 0:1
+	  
+	# champs que pour Aurore
+	gvoi:arrivalDate #1:1
+	gvoi:arrivalNumber
+	gvoi:status # 0:*
+	gvoi:building #1:1
+	gvoi:room
 	gvoi:leavingDate  
 	gvoi:newLocation
-	  
-	foaf:img # 0:1
+	gvoi:insuranceStatus
+	gvoi:haveBenefitOf
+
   ) .
 
+forms:arrivalNumber--form-Organization
+	:fieldAppliesToForm forms:form-Organization ;
+	:fieldAppliesToProperty gvoi:arrivalNumber ;
+        :cardinality :exactlyOne .
+
+forms:insuranceStatus--form-Organization
+	:fieldAppliesToForm forms:form-Organization ;
+	:fieldAppliesToProperty gvoi:insuranceStatus ;
+        :cardinality :exactlyOne .
 
 forms:leavingDate--form-Organization
 	:fieldAppliesToForm forms:form-Organization ;
