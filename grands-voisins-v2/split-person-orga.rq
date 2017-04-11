@@ -4,9 +4,16 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix foaf: <http://xmlns.com/foaf/0.1/>
 prefix cco: <http://purl.org/ontology/cco/core#>
 prefix pair: <http://virtual-assembly.org/pair_v2#>
+prefix gvoi: <http://assemblee-virtuelle.github.io/grands-voisins-v2/gv.owl.ttl#>
+
+# Lancer avec:
+# java -cp $JARS2 arq.sparql --data=$HOME/data/Voisins-sur-site_5_avril.csv.ttl --query $HOME/src/assemblee-virtuelle.github.io/grands-voisins-v2/split-person-orga.rq > $HOME/data/Voisins-sur-site_5_avril.csv.split.ttl
 
 # DELETE { GRAPH <file:///home/jmv/data/Non_public/Voisins-sur-site.csv.split.ttl> {?ORGA ?P ?O .}}
-INSERT { GRAPH ?newURI {
+# INSERT { GRAPH ?newURI {
+
+CONSTRUCT {
+
   ?PERSON a foaf:Person ;
           foaf:familyName ?FN ;
           foaf:givenName ?GN ;
@@ -15,24 +22,45 @@ INSERT { GRAPH ?newURI {
 
   ?newURI a foaf:Organization .
   ?newURI ?P ?O .
-  ?newURI pair:hasResponsible ?ORGA .
-}}
-WHERE { GRAPH <file:///home/jmv/data/Non_public/Voisins-sur-site.csv.split.ttl> {
- OPTIONAL {
-  ?PERSON foaf:familyName ?FN ;
-          foaf:givenName ?GN ;
-          foaf:mbox ?MB ;
-          foaf:phone ?PH . }
+
+  ?PERSON <http://www.w3.org/ns/org#headOf> ?newURI .
+  ?newURI <http://www.w3.org/ns/org#Head> ?PERSON .
+}
+
+WHERE { 
+#GRAPH <file:///home/jmv/data/Non_public/Voisins-sur-site.csv.split.ttl> {
+
+       { ?PERSON foaf:familyName ?FN }
+ UNION { ?PERSON foaf:givenName ?GN }
+ UNION { ?PERSON foaf:mbox ?MB }
+ UNION { ?PERSON foaf:phone ?PH . }
+
+ FILTER( ?PERSON = ?ORGA )
+ # ?ORGA foaf:name "CHS La maison coeur de femmes" # DEBUG!!!!!!!! "CADAFO" .
 
  OPTIONAL {
-  ?ORGA  a <http://vocab.sindice.net/csv/Row> ;
-         ?P ?O .
+  ?ORGA  ?P ?O .
   FILTER( ?P != foaf:familyName &&
           ?P != foaf:givenName &&
           ?P != foaf:mbox &&
-          ?P != foaf:phone &&
-          ?P != <http://vocab.sindice.net/csv/row>
-   )
+          ?P != foaf:phone
+  )
+  FILTER(
+    ?O != <http://vocab.sindice.net/csv/Row> &&
+    ?P != <http://vocab.sindice.net/csv/rowPosition> &&
+    ?P != <urn:gv/contacts/Print> &&
+    ?P != <urn:gv/contacts/SiteWeb> 
+  )
+
+# http://vocab.sindice.net/csv/rowPosition -- a supprimer
+# urn:gv/contactsPrint -- a supprimer
+# urn:gv/contactsSiteWeb -- a supprimer
+# urn:gv/contactsN°Arrivee -- a supprimer
+
+# urn:gv/contactsFacebook -- devient -- gvoi:facebook
+# http://virtual-assembly.org/pair_v2#hasResponsible -- devient -- http://www.w3.org/ns/org#headOf
+# http://purl.org/dc/elements/1.1/fsubject/ -- devient -- gvoi:description
+
  }
  BIND (URI(CONCAT( STR(?ORGA), "-org") ) AS ?newURI)
-}}
+}
