@@ -74,8 +74,30 @@ org:headOf a owl:ObjectProperty;
          :domain foaf:Person;
          :label "City"@en;
          :label "Ville"@fr;
-         :range owl:Thing .
+         :range owl:Thing . 
 
+    gvoi:arrivalNumber     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "Arrival number"@en;
+         :label "Numéro d'arrivée"@fr;
+         :range xsd:integer,
+		xsd:string .
+
+    gvoi:insuranceStatus     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "Inssurance statuts"@en;
+         :label "Statut de l'assurance"@fr;
+         :range xsd:integer,
+		xsd:string .
+
+    gvoi:haveBenefitOf     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "Have benefit of"@en;
+         :label "A bénéficier de"@fr;
+         :range xsd:string .
 
     gvoi:proposedContribution     a rdf:Property,
                 owl:DatatypeProperty;
