@@ -92,6 +92,13 @@ org:headOf a owl:ObjectProperty;
          :range xsd:integer,
 		xsd:string .
 
+    gvoi:thesaurus     a rdf:Property,
+                owl:DatatypeProperty;
+         :domain foaf:Organization;
+         :label "thematic"@en;
+         :label "Thématique"@fr;
+         :range xsd:string .
+
     gvoi:haveBenefitOf     a rdf:Property,
                 owl:DatatypeProperty;
          :domain foaf:Organization;
