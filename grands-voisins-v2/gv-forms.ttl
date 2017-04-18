@@ -43,8 +43,8 @@ forms:form-Person
 
 	foaf:homepage # 0:*
 	foaf:mbox # 0:*
-	foaf:phone # 0:*
-
+	foaf:phone # 0:*  
+	  
 	foaf:topic_interest # 0:*
 	foaf:knows # 0:*
 	foaf:currentProject# 0:*
@@ -56,6 +56,8 @@ forms:form-Person
         gvoi:slack
 	foaf:birthday
 	foaf:img
+	
+	gvoi:thesaurus  
   ) .
 
 forms:topic_interest
@@ -132,7 +134,8 @@ forms:form-Organization
 	gvoi:linkedin # 0:*
 	gvoi:facebook # 0:*
 	foaf:img # 0:1
-	  
+	
+	gvoi:thesaurus
 	# champs que pour Aurore
 	gvoi:arrivalDate #1:1
 	gvoi:arrivalNumber
@@ -240,6 +243,7 @@ forms:form-Project
 	foaf:isPrimaryTopicOf #1:*
 	foaf:depiction #1:*
 	#foaf:holdsAccount*
+	gvoi:thesaurus
 	
   ) .
 
@@ -301,6 +305,7 @@ forms:form-Event
 	gvoi:ressouceNeeded
 	gvoi:ressouceProposed
 	foaf:topic_interest # 0:*
+	gvoi:thesaurus
 	  ) .
 
 forms:form-Proposition
@@ -316,6 +321,7 @@ forms:form-Proposition
 	foaf:topic_interest # 0:*
 	gvoi:ressouceNeeded
 	gvoi:ressouceProposed
+	gvoi:thesaurus
 	  ) .
 
 forms:ressouceNeeded--form-Project
