@@ -1,0 +1,116 @@
+@prefix schema: <http://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+
+<http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> a skos:ConceptScheme ;
+	dct:description "Thesaurus pour les grands voisins"@fr ;
+	dct:title "Grands Voisins"@fr ;
+	skos:hasTopConcept <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#agriculture> , <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#artisanat> , <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#citoyennete> , <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#climat> , <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#culture> , <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#eau> , <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#economie> , <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#education> , <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#habitat> , <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#media> , <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#philosophie> , <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#sante> , <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#solidarite> , <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#transport> .
+
+<http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#agriculture> a skos:Concept ;
+	skos:definition "Agriculture et alimentation"@fr ;
+	skos:inScheme <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> ;
+	skos:notation "AGRI" ;
+	skos:prefLabel "Agriculture et alimentation"@fr ;
+	skos:topConceptOf <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> .
+
+<http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#artisanat> a skos:Concept ;
+	skos:definition "Artisanat, fabriquer, réparer, zéro déchet"@fr ;
+	skos:inScheme <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> ;
+	skos:notation "ART" ;
+	skos:prefLabel "Artisanat, fabriquer, réparer, zéro déchet"@fr ;
+	skos:topConceptOf <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> .
+
+<http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#citoyennete> a skos:Concept ;
+	skos:definition "Citoyenneté, genre, droits"@fr ;
+	skos:inScheme <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> ;
+	skos:notation "CIT" ;
+	skos:prefLabel "Citoyenneté, genre, droits"@fr ;
+	skos:topConceptOf <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> .
+
+<http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#climat> a skos:Concept ;
+	skos:definition "Climat et énergie"@fr ;
+	skos:inScheme <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> ;
+	skos:notation "CLIMAT" ;
+	skos:prefLabel "Climat et énergie"@fr ;
+	skos:topConceptOf <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> .
+
+<http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#culture> a skos:Concept ;
+	skos:definition "Culture & arts"@fr ;
+	skos:inScheme <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> ;
+	skos:notation "CULT" ;
+	skos:prefLabel "Culture & arts"@fr ;
+	skos:topConceptOf <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> .
+
+<http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#eau> a skos:Concept ;
+	skos:definition "Eau, nature et biodiversité"@fr ;
+	skos:inScheme <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> ;
+	skos:notation "EAU" ;
+	skos:prefLabel "Eau, nature et biodiversité"@fr ;
+	skos:topConceptOf <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> .
+
+<http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#economie> a skos:Concept ;
+	skos:definition "Économie soutenable"@fr ;
+	skos:inScheme <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> ;
+	skos:notation "ECO" ;
+	skos:prefLabel "Économie soutenable"@fr ;
+	skos:topConceptOf <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> .
+
+<http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#education> a skos:Concept ;
+	skos:definition "Éducation et formation"@fr ;
+	skos:inScheme <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> ;
+	skos:notation "EDU" ;
+	skos:prefLabel "Éducation et formation"@fr ;
+	skos:topConceptOf <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> .
+
+<http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#habitat> a skos:Concept ;
+	skos:definition "Habitat, architecture  et urbanisme"@fr ;
+	skos:inScheme <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> ;
+	skos:notation "HAB" ;
+	skos:prefLabel "Habitat, architecture  et urbanisme"@fr ;
+	skos:topConceptOf <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> .
+
+<http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#media> a skos:Concept ;
+	skos:definition "Médias et numérique"@fr ;
+	skos:inScheme <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> ;
+	skos:notation "MEDIA" ;
+	skos:prefLabel "Médias et numérique"@fr ;
+	skos:topConceptOf <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> .
+
+<http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#philosophie> a skos:Concept ;
+	skos:definition "Philosophies, religions et spiritualités"@fr ;
+	skos:inScheme <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> ;
+	skos:notation "PHILO" ;
+	skos:prefLabel "Philosophies, religions et spiritualités"@fr ;
+	skos:topConceptOf <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> .
+
+<http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#sante> a skos:Concept ;
+	skos:definition "Santé, thérapies"@fr ;
+	skos:inScheme <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> ;
+	skos:notation "SANTE" ;
+	skos:prefLabel "Santé, thérapies"@fr ;
+	skos:topConceptOf <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> .
+
+<http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#solidarite> a skos:Concept ;
+	skos:definition "Solidarité et migrations"@fr ;
+	skos:inScheme <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> ;
+	skos:notation "SOLI" ;
+	skos:prefLabel "Solidarité et migrations"@fr ;
+	skos:topConceptOf <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> .
+
+<http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl#transport> a skos:Concept ;
+	skos:definition "Transports / mobilités"@fr ;
+	skos:inScheme <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> ;
+	skos:notation "TRANS" ;
+	skos:prefLabel "Transports / mobilités"@fr ;
+	skos:topConceptOf <http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl> .
