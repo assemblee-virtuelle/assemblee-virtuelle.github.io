@@ -49,7 +49,8 @@ forms:form-Person
 	foaf:knows # 0:*
 	foaf:currentProject# 0:*
 	org:memberOf
-
+	gvoi:description #1:*
+	foaf:status
 	cco:expertise # 0:*
 	gvoi:ressouceNeeded
 	gvoi:ressouceProposed
@@ -107,6 +108,7 @@ forms:form-Organization
 	foaf:name #1:1
 	gvoi:administrativeName #1:1
 	gvoi:description #1:*
+	foaf:status
 	foaf:topic_interest # 0:*
 	gvoi:conventionType # 0:*
 	gvoi:contributionType
@@ -230,6 +232,7 @@ forms:form-Project
   form:showProperties (
 	rdfs:label #1:1
 	gvoi:description #1:*
+	foaf:status
 	foaf:fundedBy # 1:*
 	foaf:maker #1:*	
         org:OrganizationalCollaboration
@@ -294,6 +297,7 @@ forms:form-Event
   form:showProperties (
 	rdfs:label #1:1
 	gvoi:description #1:*
+	foaf:status
 	foaf:mbox #0:*
 	foaf:fundedBy # 1:* 
 	gvoi:building #1:1
@@ -316,6 +320,7 @@ forms:form-Proposition
 	foaf:mbox #0:*
 	rdfs:label #1:1
 	gvoi:description #1:*
+	foaf:status
 	gvoi:building #1:1
         gvoi:room # 1:1	
 	foaf:topic_interest # 0:*
