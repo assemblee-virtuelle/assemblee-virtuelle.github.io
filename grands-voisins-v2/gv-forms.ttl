@@ -233,7 +233,7 @@ forms:form-Project
 	rdfs:label #1:1
 	gvoi:description #1:*
 	foaf:status
-	foaf:fundedBy # 1:*
+	org:Head
 	foaf:maker #1:*	
         org:OrganizationalCollaboration
 	gvoi:projectStart
@@ -316,7 +316,7 @@ forms:form-Proposition
   a form:specification ;
   form:classDomain fipa:Proposition ;
   form:showProperties (
-	foaf:fundedBy # 1:* 
+	foaf:maker #1:*
 	foaf:mbox #0:*
 	rdfs:label #1:1
 	gvoi:description #1:*
