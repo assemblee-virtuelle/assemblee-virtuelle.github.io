@@ -112,7 +112,7 @@ forms:form-Organization
 	foaf:topic_interest # 0:*
 	gvoi:conventionType # 0:*
 	gvoi:contributionType
-	  
+	org:OrganizationalCollaboration
 	gvoi:isReferencedBy
 	org:Head #1:*
 	org:hasMember #1:*
