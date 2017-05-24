@@ -247,7 +247,8 @@ forms:form-Project
 	foaf:depiction #1:*
 	#foaf:holdsAccount*
 	gvoi:thesaurus
-	
+	foaf:img
+	foaf:topic_interest # 0:*
   ) .
 
 forms:description--form-Project
@@ -310,6 +311,7 @@ forms:form-Event
 	gvoi:ressouceProposed
 	foaf:topic_interest # 0:*
 	gvoi:thesaurus
+	foaf:img
 	  ) .
 
 forms:form-Proposition
@@ -327,6 +329,7 @@ forms:form-Proposition
 	gvoi:ressouceNeeded
 	gvoi:ressouceProposed
 	gvoi:thesaurus
+	foaf:img
 	  ) .
 
 forms:ressouceNeeded--form-Project
