@@ -13,7 +13,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sioc: <http://rdfs.org/sioc/ns#> .
 @prefix cv: <http://rdfs.org/resume-rdf/cv.rdfs#> .
-
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix fipa: <http://www.fipa.org/schemas#> .
 <>  a owl:Ontology ;
 	rdfs:comment """ Top level Grand Voisins Ontology that imports the rest."""@en ;
 	rdfs:comment """Ontologie principale Grand Voisins qui importe le reste."""@fr ;
