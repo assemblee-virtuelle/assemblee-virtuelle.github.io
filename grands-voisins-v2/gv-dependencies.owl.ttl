@@ -13,11 +13,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sioc: <http://rdfs.org/sioc/ns#> .
 @prefix cv: <http://rdfs.org/resume-rdf/cv.rdfs#> .
-
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix fipa: <http://www.fipa.org/schemas#> .
 <> owl:imports foaf: ,
                dcterms: , dc: ,
                skos: ,
                sioc: ,
+	       event:,
+	       fipa:,
                # NOTE: schema.org is not self hosted, so we use this:
                <http://topbraid.org/schema/schema.ttl>
                # schema:        
