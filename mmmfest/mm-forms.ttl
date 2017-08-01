@@ -36,5 +36,5 @@ mmforms:form-Person
 	default:organizes # sf (event)
 	default:participantOf # sf (event)
 	default:brainstorms # sf (proposition)
-	defalut:affiliatedTo # sf (orga)
+	default:affiliatedTo # sf (orga)
 ) .
