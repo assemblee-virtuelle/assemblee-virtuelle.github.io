@@ -12,10 +12,9 @@
 mmforms:form-Person
   a form:specification ;
   form:classDomain default:Person ;
-  rdfs:label "Personne FOAF - court"@fr ;
-  rdfs:label "FOAF Person - short form"@en ;
+  rdfs:label "Personne PAIR - mmfest"@fr ;
+  rdfs:label "PAIR Person - mmfest"@en ;
   form:showProperties (
-	#protege
 	default:firstName # txt
 	default:lastName # txt
 	default:alias # txt
@@ -38,3 +37,105 @@ mmforms:form-Person
 	default:brainstorms # sf (proposition)
 	default:affiliatedTo # sf (orga)
 ) .
+
+mmforms:form-Organization
+  a form:specification ;
+  form:classDomain default:Organization ;
+  rdfs:label "Organisation PAIR - mmfest"@fr ;
+  rdfs:label "PAIR Organization - mmfest"@en ;
+  form:showProperties (
+  	default:preferedLabel # txt
+	default:alternativeLabel # txt
+	default:representedBy# img
+	default:description # txt 
+	default:comment # txt
+	default:homePage # url
+	default:aboutPage # url
+	default:e-mail # txt
+	default:phone # txt
+	default:hostedIn # adresse ?
+	default:documentedBy # sf ( Doc )
+	default:hasSubject # ?
+	default:hasMember # sf ( person )
+	default:hasResponsible # sf ( person )
+	default:employs # sf ( person )
+	default:partnerOf # sf (orga)
+	default:involvedIn # sf (projet)
+	default:manages # sf (projet)
+	default:operates # building
+	default:organizes # sf (event)
+	default:participantOf # sf (event)
+	default:offers # dbpedia
+	default:needs # dbpedia
+	default:brainstorms# sf (proposition)
+) .
+
+mmforms:form-Project
+  a form:specification ;
+  form:classDomain default:Project ;
+  rdfs:label "Projet PAIR - mmfest"@fr ;
+  rdfs:label "PAIR Project - mmfest"@en ;
+  form:showProperties (
+	default:preferedLabel # txt
+	default:alternativeLabel # txt
+	#default:subjectIdentifier # txt
+	default:description # txt
+	default:comment # txt
+	default:homePage # url
+	default:aboutPage # url
+	default:concretizes # sf (proposition)
+	default:managedBy # sf (person,orga)
+	default:representedBy # sf (person,orga)
+	default:needs # dbpedia
+	default:involves  # sf (person,orga)
+	default:documentedBy # sf (doc)
+	default:delivers # Place ?
+	default:hasSubject # ?
+	default:subjectOf # ?
+  ) .
+
+mmforms:form-Event
+  a form:specification ;
+  form:classDomain default:Event ;
+  rdfs:label "Evénement PAIR - mmfest"@fr ;
+  rdfs:label "PAIR Event - mmfest"@en ;
+  form:showProperties (
+	default:preferedLabel # txt
+	default:alternativeLabel # txt
+	#default:subjectIdentifier # txt
+	default:description # txt
+	default:startDate # date
+	default:endDate # date
+	default:localizedBy # sf ou building
+	default:representedBy # sf (person,orga)
+	default:aboutPage # url
+	default:comment # txt
+	default:documentedBy # sf (doc)
+	default:hasSubject # ?
+	default:hasInterest # dbpedia
+	default:organizedBy # sf (person,orga)
+	default:hasParticipant # sf (person,orga)
+  ) .
+
+
+mmforms:form-Proposal
+  a form:specification ;
+  form:classDomain default:Proposal ;
+  rdfs:label "proposition PAIR - mmfest"@fr ;
+  rdfs:label "PAIR Proposal - mmfest"@en ;
+  form:showProperties (
+	default:preferedLabel # txt
+	default:alternativeLabel # txt
+	#default:subjectIdentifier # txt
+	default:description # txt
+	default:comment # txt
+	default:aboutPage # url
+	default:homePage # url
+	default:brainstormedBy # sf (person,orga)
+	default:concretizedBy # sf (person,orga)
+	default:representedBy # sf (person,orga)
+	default:documentedBy # sf (doc)
+	#default:hasSubject # ?
+	#default:subjectOf # ?
+	  
+  ) .
