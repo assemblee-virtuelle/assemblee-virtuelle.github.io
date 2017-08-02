@@ -8,7 +8,7 @@
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xml:base="http://virtual-assembly.org/pair">
+  xml:base="http://assemblee-virtuelle.github.io/mmmfest/PAIR_temp.owl#">
   <owl:Ontology rdf:about="">
     <rdfs:comment xml:lang="fr">Ontologie PAIR conforme au Modèle Sémantique des Concepts v3.02</rdfs:comment>
   </owl:Ontology>
