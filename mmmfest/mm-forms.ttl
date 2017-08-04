@@ -46,7 +46,7 @@ mmforms:form-Organization
   form:showProperties (
   	default:preferedLabel # txt
 	default:alternativeLabel # txt
-	default:representedBy# img
+	default:representedBy# sf (doc)
 	default:description # txt 
 	default:comment # txt
 	default:homePage # url
@@ -85,13 +85,13 @@ mmforms:form-Project
 	default:aboutPage # url
 	default:concretizes # sf (proposition)
 	default:managedBy # sf (person,orga)
-	default:representedBy # sf (person,orga)
+	default:representedBy # sf (doc)
 	default:needs # dbpedia
 	default:involves  # sf (person,orga)
 	default:documentedBy # sf (doc)
 	default:delivers # Place ?
-	default:hasSubject # ?
-	default:subjectOf # ?
+	default:hasSubject # dbpedia
+	#default:subjectOf # ?
   ) .
 
 mmforms:form-Event
@@ -107,11 +107,11 @@ mmforms:form-Event
 	default:startDate # date
 	default:endDate # date
 	default:localizedBy # sf ou building
-	default:representedBy # sf (person,orga)
+	default:representedBy # sf (doc)
 	default:aboutPage # url
 	default:comment # txt
 	default:documentedBy # sf (doc)
-	default:hasSubject # ?
+	default:hasSubject # dbpedia
 	default:hasInterest # dbpedia
 	default:organizedBy # sf (person,orga)
 	default:hasParticipant # sf (person,orga)
@@ -133,9 +133,43 @@ mmforms:form-Proposal
 	default:homePage # url
 	default:brainstormedBy # sf (person,orga)
 	default:concretizedBy # sf (person,orga)
-	default:representedBy # sf (person,orga)
+	default:representedBy # sf (doc)
 	default:documentedBy # sf (doc)
-	#default:hasSubject # ?
-	#default:subjectOf # ?
+	default:hasSubject # dbpedia
+  ) .
+
+mmforms:form-Document
+  a form:specification ;
+  form:classDomain default:Document ;
+  rdfs:label "document PAIR - mmfest"@fr ;
+  rdfs:label "PAIR document - mmfest"@en ;
+  form:showProperties (
+	default:preferedLabel # txt
+	default:alternativeLabel # txt
+	#default:subjectIdentifier # txt
+	default:description # txt
+	default:comment # txt
+	default:aboutPage # url
+	default:homePage # url
+	default:hasType # sf (doc type)
+	default:represents # sf (all)
+	default:documents # sf all
+	default:references # sf (doc) 
+	default:referencedBy #sf (doc)
 	  
+  ) .
+mmforms:form-DocumentType
+  a form:specification ;
+  form:classDomain default:DocumentType ;
+  rdfs:label "Type de Document PAIR - mmfest"@fr ;
+  rdfs:label "PAIR Document type - mmfest"@en ;
+  form:showProperties (
+	default:preferedLabel # txt
+	default:alternativeLabel # txt
+	#default:subjectIdentifier # txt
+	default:description # txt
+	default:comment # txt
+	default:aboutPage # url
+	default:homePage # url
+	default:typeOf # sf (doc)
   ) .
