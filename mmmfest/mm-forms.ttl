@@ -155,7 +155,7 @@ mmforms:form-Document
 	default:represents # sf (all)
 	default:documents # sf all
 	default:references # sf (doc) 
-	default:referencedBy #sf (doc)
+	default:referencesBy #sf (doc)
 	  
   ) .
 mmforms:form-DocumentType
