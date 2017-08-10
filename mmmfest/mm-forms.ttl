@@ -92,6 +92,7 @@ mmforms:form-Project
 	default:delivers # Place ?
 	default:hasSubject # dbpedia
 	#default:subjectOf # ?
+	default:hasInterest # dbpedia
   ) .
 
 mmforms:form-Event
