@@ -36,6 +36,7 @@ mmforms:form-Person
 	default:participantOf # sf (event)
 	default:brainstorms # sf (proposition)
 	default:affiliatedTo # sf (orga)
+	default:image
 ) .
 
 mmforms:form-Organization
@@ -68,6 +69,7 @@ mmforms:form-Organization
 	default:offers # dbpedia
 	default:needs # dbpedia
 	default:brainstorms# sf (proposition)
+	default:image
 ) .
 
 mmforms:form-Project
@@ -93,6 +95,7 @@ mmforms:form-Project
 	default:hasSubject # dbpedia
 	#default:subjectOf # ?
 	default:hasInterest # dbpedia
+	default:image
   ) .
 
 mmforms:form-Event
@@ -116,6 +119,7 @@ mmforms:form-Event
 	default:hasInterest # dbpedia
 	default:organizedBy # sf (person,orga)
 	default:hasParticipant # sf (person,orga)
+	default:image
   ) .
 
 
@@ -137,6 +141,7 @@ mmforms:form-Proposal
 	default:representedBy # sf (doc)
 	default:documentedBy # sf (doc)
 	default:hasSubject # dbpedia
+	default:image
   ) .
 
 mmforms:form-Document
