@@ -20,6 +20,7 @@ mmforms:form-Person
 	default:alias # txt
 	default:representedBy # img
 	default:description # txt 
+	default:homePage # url
 	default:aboutPage # url
 	default:localizedBy # txt ( url )
 	default:e-mail # txt
@@ -68,6 +69,7 @@ mmforms:form-Organization
 	default:participantOf # sf (event)
 	default:offers # dbpedia
 	default:needs # dbpedia
+	default:hasInterest # dbpedia
 	default:brainstorms# sf (proposition)
 	default:image
 ) .
@@ -88,6 +90,7 @@ mmforms:form-Project
 	default:concretizes # sf (proposition)
 	default:managedBy # sf (person,orga)
 	default:representedBy # sf (doc)
+	  default:offers # dbpedia
 	default:needs # dbpedia
 	default:involves  # sf (person,orga)
 	default:documentedBy # sf (doc)
@@ -112,6 +115,7 @@ mmforms:form-Event
 	default:endDate # date
 	default:localizedBy # sf ou building
 	default:representedBy # sf (doc)
+	  default:homePage # url
 	default:aboutPage # url
 	default:comment # txt
 	default:documentedBy # sf (doc)
@@ -141,6 +145,7 @@ mmforms:form-Proposal
 	default:representedBy # sf (doc)
 	default:documentedBy # sf (doc)
 	default:hasSubject # dbpedia
+	default:hasInterest # dbpedia
 	default:image
   ) .
 
