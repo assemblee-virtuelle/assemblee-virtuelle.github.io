@@ -26,6 +26,7 @@ mmforms:form-Person
 	default:e-mail # txt
 	default:phone # txt
 	default:hasInterest # dbpedia
+	default:hasSubject # ?
 	default:knows # sf ( person )
 	default:memberOf # sf ( orga)
 	default:responsibleOf # sf ( orga )
