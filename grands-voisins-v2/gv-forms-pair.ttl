@@ -1,0 +1,162 @@
+@prefix form: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix default:  <http://assemblee-virtuelle.github.io/mmmfest/PAIR_temp.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix gvforms: <http://assemblee-virtuelle.github.io/grands-voisins-v2/gv-forms-pair.ttl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix gvoi: <http://assemblee-virtuelle.github.io/grands-voisins-v2/gv.owl.ttl#> .
+@prefix cco: <http://purl.org/ontology/cco/core#> .
+
+<> foaf:label "Formulaires Millemont: Personne, Orga, etc"@fr .
+
+gvforms:form-Person
+  a form:specification ;
+  form:classDomain default:Person ;
+  rdfs:label "Personne PAIR - mmfest"@fr ;
+  rdfs:label "PAIR Person - mmfest"@en ;
+  form:showProperties (
+	default:firstName # txt
+	default:lastName # txt
+  gvoi:postalCode
+  gvoi:city
+  default:responsibleOf # sf ( orga )
+  
+  default:homePage # url
+  default:e-mail # txt
+	default:phone # txt
+  
+  default:hasSubject # dbpedia
+  default:knows # sf ( person )
+  #currentProject
+  default:memberOf # sf ( orga)
+  default:description # txt 
+  default:comment # txt
+  cco:expertise # dbpedia
+  default:offers # dbpedia
+	default:needs # dbpedia
+  default:alias # txt
+  foaf:birthday
+  default:image
+  
+  default:hasInterest # Thesaurus
+	
+) .
+
+gvforms:form-Organization
+  a form:specification ;
+  form:classDomain default:Organization ;
+  rdfs:label "Organisation PAIR - mmfest"@fr ;
+  rdfs:label "PAIR Organization - mmfest"@en ;
+  form:showProperties (
+  default:preferedLabel # txt
+	default:alternativeLabel # txt
+	default:description # txt 
+  default:comment # txt	
+  default:hasSubject # dbpedia
+  gvoi:conventionType # 0:*
+  gvoi:contributionType
+ 	default:partnerOf # sf (orga)
+  #isReferencedBy
+	default:hasResponsible # sf ( person )  
+	default:hasMember # sf ( person )  
+  gvoi:employeesCount #1:*
+  
+  default:homePage # url
+  default:phone # txt
+  default:e-mail # txt
+  #depiction 
+	
+  default:needs # dbpedia
+  default:offers # dbpedia
+  gvoi:proposedContribution # 0:*
+  gvoi:realisedContribution # 0:*
+  #volunteeringProposals 
+  
+  gvoi:twitter # 0:*
+	gvoi:linkedin # 0:*
+  gvoi:facebook # 0:*
+  default:image
+  
+	default:hasInterest # Thesaurus
+  # champs que pour Aurore
+  gvoi:arrivalDate #1:1
+  gvoi:arrivalNumber
+  gvoi:status # 0:*
+  default:hostedIn # building
+  gvoi:room
+  gvoi:leavingDate 
+  gvoi:newLocation
+	gvoi:insuranceStatus
+  #haveBenefitOf
+) .
+
+gvforms:form-Project
+  a form:specification ;
+  form:classDomain default:Project ;
+  rdfs:label "Projet PAIR - mmfest"@fr ;
+  rdfs:label "PAIR Project - mmfest"@en ;
+  form:showProperties (
+	default:preferedLabel # txt
+	default:description # txt
+	default:comment # txt
+	default:managedBy # sf (person,orga)
+  default:involves  # sf (person,orga)
+  #OrganizationalCollaboration
+  default:startDate # date
+  default:localizedBy #building
+  gvoi:room # 1:1
+  default:homePage # url
+  default:e-mail # txt
+  default:needs # dbpedia
+  default:offers # dbpedia
+  #isPrimaryTopicOf 
+  #depiction 
+  default:hasInterest # Thesaurus	
+  default:image
+  default:hasSubject
+  ) .
+
+gvforms:form-Event
+  a form:specification ;
+  form:classDomain default:Event ;
+  rdfs:label "Evénement PAIR - mmfest"@fr ;
+  rdfs:label "PAIR Event - mmfest"@en ;
+  form:showProperties (
+	default:preferedLabel # txt
+  default:description # txt
+  default:comment # txt  
+  default:e-mail # txt
+  #fundedBy 
+  default:localizedBy #building
+  gvoi:room # 1:1	
+  default:involves  # sf (person,orga)
+  #OrganizationalCollaboration 
+	default:startDate # date
+	default:endDate # date  
+  default:needs # dbpedia
+  default:offers # dbpedia
+  default:hasSubject
+  default:hasInterest # Thesaurus	
+  default:image
+  ) .
+
+
+gvforms:form-Proposal
+  a form:specification ;
+  form:classDomain default:Proposal ;
+  rdfs:label "proposition PAIR - mmfest"@fr ;
+  rdfs:label "PAIR Proposal - mmfest"@en ;
+  form:showProperties (
+	default:brainstormedBy # sf (person,orga)
+  default:e-mail # txt
+	default:preferedLabel # txt
+  default:description # txt
+  default:comment # txt
+  default:localizedBy #building
+  default:hasSubject
+  default:needs # dbpedia
+  default:offers # dbpedia
+  default:hasInterest # Thesaurus	
+  default:image
+  ) .
+
