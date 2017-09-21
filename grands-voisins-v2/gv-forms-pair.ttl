@@ -7,7 +7,7 @@
 @prefix gvoi: <http://assemblee-virtuelle.github.io/grands-voisins-v2/gv.owl.ttl#> .
 @prefix cco: <http://purl.org/ontology/cco/core#> .
 
-<> foaf:label "Formulaires Millemont: Personne, Orga, etc"@fr .
+<> foaf:label "Formulaires Grands Voisins v2: Personne, Orga, etc"@fr .
 
 gvforms:form-Person
   a form:specification ;
