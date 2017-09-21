@@ -12,8 +12,8 @@
 gvforms:form-Person
   a form:specification ;
   form:classDomain default:Person ;
-  rdfs:label "Personne PAIR - mmfest"@fr ;
-  rdfs:label "PAIR Person - mmfest"@en ;
+  rdfs:label "Personne PAIR - Grands Voisins"@fr ;
+  rdfs:label "PAIR Person - Grands Voisins"@en ;
   form:showProperties (
 	default:firstName # txt
 	default:lastName # txt
@@ -45,8 +45,8 @@ gvforms:form-Person
 gvforms:form-Organization
   a form:specification ;
   form:classDomain default:Organization ;
-  rdfs:label "Organisation PAIR - mmfest"@fr ;
-  rdfs:label "PAIR Organization - mmfest"@en ;
+  rdfs:label "Organisation PAIR - Grands Voisins"@fr ;
+  rdfs:label "PAIR Organization - Grands Voisins"@en ;
   form:showProperties (
   default:preferedLabel # txt
 	default:alternativeLabel # txt
@@ -93,8 +93,8 @@ gvforms:form-Organization
 gvforms:form-Project
   a form:specification ;
   form:classDomain default:Project ;
-  rdfs:label "Projet PAIR - mmfest"@fr ;
-  rdfs:label "PAIR Project - mmfest"@en ;
+  rdfs:label "Projet PAIR - Grands Voisins"@fr ;
+  rdfs:label "PAIR Project - Grands Voisins"@en ;
   form:showProperties (
 	default:preferedLabel # txt
 	default:description # txt
@@ -119,8 +119,8 @@ gvforms:form-Project
 gvforms:form-Event
   a form:specification ;
   form:classDomain default:Event ;
-  rdfs:label "Evénement PAIR - mmfest"@fr ;
-  rdfs:label "PAIR Event - mmfest"@en ;
+  rdfs:label "Evénement PAIR - Grands Voisins"@fr ;
+  rdfs:label "PAIR Event - Grands Voisins"@en ;
   form:showProperties (
 	default:preferedLabel # txt
   default:description # txt
@@ -144,8 +144,8 @@ gvforms:form-Event
 gvforms:form-Proposal
   a form:specification ;
   form:classDomain default:Proposal ;
-  rdfs:label "proposition PAIR - mmfest"@fr ;
-  rdfs:label "PAIR Proposal - mmfest"@en ;
+  rdfs:label "proposition PAIR - Grands Voisins"@fr ;
+  rdfs:label "PAIR Proposal - Grands Voisins"@en ;
   form:showProperties (
 	default:brainstormedBy # sf (person,orga)
   default:e-mail # txt
