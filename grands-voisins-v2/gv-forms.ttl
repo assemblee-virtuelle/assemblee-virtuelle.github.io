@@ -299,6 +299,7 @@ forms:form-Event
 	rdfs:label #1:1
 	gvoi:description #1:*
 	foaf:status
+	foaf:homepage #0:*
 	foaf:mbox #0:*
 	foaf:fundedBy # 1:* 
 	gvoi:building #1:1
