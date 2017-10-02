@@ -125,6 +125,9 @@ mmforms:form-Event
 	default:organizedBy # sf (person,orga)
 	default:hasParticipant # sf (person,orga)
 	default:image
+	#temp
+	default:hasFloor
+	default:hasRoom
   ) .
 
 
