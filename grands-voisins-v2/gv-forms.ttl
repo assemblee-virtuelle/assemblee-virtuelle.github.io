@@ -6,6 +6,7 @@
 @prefix org:        <http://www.w3.org/ns/org#> .
 @prefix event: <http://purl.org/NET/c4dm/event.owl#>.
 @prefix fipa: <http://www.fipa.org/schemas#>.
+@prefix default: <http://assemblee-virtuelle.github.io/mmmfest/PAIR_temp.owl#> .
 
 @prefix  form: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
 @prefix      : <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
@@ -350,4 +351,39 @@ forms:ressouceProposed--form-Project
 	:fieldAppliesToForm forms:form-Proposition ;
 	:fieldAppliesToProperty gvoi:ressouceProposed ;
 	:widgetClass form:DBPediaLookup .
+	 
+forms:form-Document
+  a form:specification ;
+  form:classDomain default:Document ;
+  rdfs:label "document PAIR - mmfest"@fr ;
+  rdfs:label "PAIR document - mmfest"@en ;
+  form:showProperties (
+	default:preferedLabel # txt
+	default:alternativeLabel # txt
+	#default:subjectIdentifier # txt
+	default:description # txt
+	default:comment # txt
+	default:aboutPage # url
+	default:homePage # url
+	default:hasType # sf (doc type)
+	default:represents # sf (all)
+	default:documents # sf all
+	default:references # sf (doc) 
+	default:referencesBy #sf (doc)
 	  
+  ) .
+forms:form-DocumentType
+  a form:specification ;
+  form:classDomain default:DocumentType ;
+  rdfs:label "Type de Document PAIR - mmfest"@fr ;
+  rdfs:label "PAIR Document type - mmfest"@en ;
+  form:showProperties (
+	default:preferedLabel # txt
+	default:alternativeLabel # txt
+	#default:subjectIdentifier # txt
+	default:description # txt
+	default:comment # txt
+	default:aboutPage # url
+	default:homePage # url
+	default:typeOf # sf (doc)
+) .
