@@ -149,7 +149,7 @@ forms:form-Organization
 	gvoi:newLocation
 	gvoi:insuranceStatus
 	gvoi:haveBenefitOf
-
+	default:documentedBy # sf (doc)
   ) .
 
 forms:arrivalNumber--form-Organization
@@ -250,6 +250,7 @@ forms:form-Project
 	gvoi:thesaurus
 	foaf:img
 	foaf:topic_interest # 0:*
+	default:documentedBy # sf (doc)
   ) .
 
 forms:description--form-Project
@@ -314,6 +315,7 @@ forms:form-Event
 	foaf:topic_interest # 0:*
 	gvoi:thesaurus
 	foaf:img
+	  default:documentedBy # sf (doc)
 	  ) .
 
 forms:form-Proposition
@@ -332,6 +334,7 @@ forms:form-Proposition
 	gvoi:ressouceProposed
 	gvoi:thesaurus
 	foaf:img
+	  default:documentedBy # sf (doc)
 	  ) .
 
 forms:ressouceNeeded--form-Project
