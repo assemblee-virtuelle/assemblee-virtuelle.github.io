@@ -373,6 +373,7 @@ forms:form-Document
 	default:documents # sf all
 	default:references # sf (doc) 
 	default:referencesBy #sf (doc)
+	gvoi:thesaurus
 	  
   ) .
 forms:form-DocumentType
