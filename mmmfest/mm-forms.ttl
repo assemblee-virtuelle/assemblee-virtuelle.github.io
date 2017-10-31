@@ -27,7 +27,7 @@ mmforms:form-Person
 	default:phone # txt
 	default:hasInterest # dbpedia
 	default:hasSubject # ?
-	default:hasSubject_Pair # ?
+	default:subjectOf_Pair # ?
 	default:knows # sf ( person )
 	default:memberOf # sf ( orga)
 	default:responsibleOf # sf ( orga )
@@ -60,7 +60,7 @@ mmforms:form-Organization
 	default:hostedIn # adresse ?
 	default:documentedBy # sf ( Doc )
 	default:hasSubject # ?
-	default:hasSubject_Pair
+	default:subjectOf_Pair
 	default:hasMember # sf ( person )
 	default:hasResponsible # sf ( person )
 	default:employs # sf ( person )
@@ -99,7 +99,7 @@ mmforms:form-Project
 	default:documentedBy # sf (doc)
 	default:delivers # Place ?
 	default:hasSubject # dbpedia
-	default:hasSubject_Pair
+	default:subjectOf_Pair
 	#default:subjectOf # ?
 	default:hasInterest # dbpedia
 	default:image
@@ -124,7 +124,7 @@ mmforms:form-Event
 	default:comment # txt
 	default:documentedBy # sf (doc)
 	default:hasSubject # dbpedia
-	default:hasSubject_Pair
+	default:subjectOf_Pair
 	default:hasInterest # dbpedia
 	default:organizedBy # sf (person,orga)
 	default:hasParticipant # sf (person,orga)
@@ -153,7 +153,7 @@ mmforms:form-Proposal
 	default:representedBy # sf (doc)
 	default:documentedBy # sf (doc)
 	default:hasSubject # dbpedia
-	default:subjectOf_Pair
+	default:hasSubject_Pair
 	default:hasInterest # dbpedia
 	default:image
   ) .
@@ -176,7 +176,7 @@ mmforms:form-Document
 	default:documents # sf all
 	default:references # sf (doc) 
 	default:referencesBy #sf (doc)
-	default:hasSubject_Pair
+	default:subjectOf_Pair
   ) .
 mmforms:form-DocumentType
   a form:specification ;
