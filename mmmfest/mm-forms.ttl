@@ -177,6 +177,14 @@ mmforms:form-Document
 	default:references # sf (doc) 
 	default:referencesBy #sf (doc)
 	default:subjectOf_Pair
+	default:internal_author
+	default:internal_contributor
+	default:format
+	default:language
+	default:licence
+	default:publicationDate
+	default:source
+	default:version
   ) .
 mmforms:form-DocumentType
   a form:specification ;
