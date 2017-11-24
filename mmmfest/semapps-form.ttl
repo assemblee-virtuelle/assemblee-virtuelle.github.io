@@ -8,7 +8,7 @@
 
 
 
-<> foaf:label "Formulaires Millemont: Personne, Orga, etc"@fr .
+<> foaf:label "Formulaires semapps"@fr .
 
 semforms:form-Person
   a form:specification ;
