@@ -1,0 +1,204 @@
+@prefix form: <http://raw.githubusercontent.com/jmvanel/semantic_forms/master/vocabulary/forms.owl.ttl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix default:  <http://assemblee-virtuelle.github.io/mmmfest/PAIR_temp.owl#> .
+@prefix pair:  <http://virtual-assembly.org/pair#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix semforms: <http://assemblee-virtuelle.github.io/mmmfest/semapps-form.ttl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+
+
+
+<> foaf:label "Formulaires Millemont: Personne, Orga, etc"@fr .
+
+semforms:form-Person
+  a form:specification ;
+  form:classDomain pair:Person ;
+  rdfs:label "Personne PAIR "@fr ;
+  rdfs:label "PAIR Person"@en ;
+  form:showProperties (
+	pair:firstName # txt
+	pair:lastName # txt
+	pair:alias # txt
+	pair:representedBy # img
+	pair:description # txt 
+	pair:homePage # url
+	pair:aboutPage # url
+	pair:localizedBy # txt ( url )
+	pair:e-mail # txt
+	pair:phone # txt
+	pair:hasInterest # dbpedia
+	pair:hasSubject # ?
+	pair:subjectOf_Pair # ?
+	pair:knows # sf ( person )
+	pair:memberOf # sf ( orga)
+	pair:responsibleOf # sf ( orga )
+	pair:involvedIn # sf (projet)
+	pair:manages # sf (projet)
+	pair:offers # dbpedia
+	pair:needs # dbpedia
+	pair:organizes # sf (event)
+	pair:participantOf # sf (event)
+	pair:brainstorms # sf (proposition)
+	pair:affiliatedTo # sf (orga)
+	pair:image
+) .
+
+semforms:form-Organization
+  a form:specification ;
+  form:classDomain pair:Organization ;
+  rdfs:label "Organisation PAIR"@fr ;
+  rdfs:label "PAIR Organization"@en ;
+  form:showProperties (
+  	pair:preferedLabel # txt
+	pair:alternativeLabel # txt
+	pair:representedBy# sf (doc)
+	pair:description # txt 
+	pair:comment # txt
+	pair:homePage # url
+	pair:aboutPage # url
+	pair:e-mail # txt
+	pair:phone # txt
+	pair:hostedIn # adresse ?
+	pair:documentedBy # sf ( Doc )
+	pair:hasSubject # ?
+	pair:subjectOf_Pair
+	pair:hasMember # sf ( person )
+	pair:hasResponsible # sf ( person )
+	pair:employs # sf ( person )
+	pair:partnerOf # sf (orga)
+	pair:involvedIn # sf (projet)
+	pair:manages # sf (projet)
+	pair:operates # building
+	pair:organizes # sf (event)
+	pair:participantOf # sf (event)
+	pair:offers # dbpedia
+	pair:needs # dbpedia
+	pair:hasInterest # dbpedia
+	pair:brainstorms# sf (proposition)
+	pair:image
+) .
+
+semforms:form-Project
+  a form:specification ;
+  form:classDomain pair:Project ;
+  rdfs:label "Projet PAIR"@fr ;
+  rdfs:label "PAIR Project"@en ;
+  form:showProperties (
+	pair:preferedLabel # txt
+	pair:alternativeLabel # txt
+	#pair:subjectIdentifier # txt
+	pair:description # txt
+	pair:comment # txt
+	pair:homePage # url
+	pair:aboutPage # url
+	pair:concretizes # sf (proposition)
+	pair:managedBy # sf (person,orga)
+	pair:representedBy # sf (doc)
+	  pair:offers # dbpedia
+	pair:needs # dbpedia
+	pair:involves  # sf (person,orga)
+	pair:documentedBy # sf (doc)
+	pair:delivers # Place ?
+	pair:hasSubject # dbpedia
+	pair:subjectOf_Pair
+	#pair:subjectOf # ?
+	pair:hasInterest # dbpedia
+	pair:image
+  ) .
+
+semforms:form-Event
+  a form:specification ;
+  form:classDomain pair:Event ;
+  rdfs:label "Evénement PAIR"@fr ;
+  rdfs:label "PAIR Event"@en ;
+  form:showProperties (
+	pair:preferedLabel # txt
+	pair:alternativeLabel # txt
+	#pair:subjectIdentifier # txt
+	pair:description # txt
+	pair:startDate # date
+	pair:endDate # date
+	pair:localizedBy # sf ou building
+	pair:representedBy # sf (doc)
+	  pair:homePage # url
+	pair:aboutPage # url
+	pair:comment # txt
+	pair:documentedBy # sf (doc)
+	pair:hasSubject # dbpedia
+	pair:subjectOf_Pair
+	pair:hasInterest # dbpedia
+	pair:organizedBy # sf (person,orga)
+	pair:hasParticipant # sf (person,orga)
+	pair:image
+	#temp
+	pair:hasFloor
+	pair:hasRoom
+  ) .
+
+
+semforms:form-Proposal
+  a form:specification ;
+  form:classDomain pair:Proposal ;
+  rdfs:label "proposition PAIR"@fr ;
+  rdfs:label "PAIR Proposal"@en ;
+  form:showProperties (
+	pair:preferedLabel # txt
+	pair:alternativeLabel # txt
+	#pair:subjectIdentifier # txt
+	pair:description # txt
+	pair:comment # txt
+	pair:aboutPage # url
+	pair:homePage # url
+	pair:brainstormedBy # sf (person,orga)
+	pair:concretizedBy # sf (person,orga)
+	pair:representedBy # sf (doc)
+	pair:documentedBy # sf (doc)
+	pair:hasSubject # dbpedia
+	pair:hasSubject_Pair
+	pair:hasInterest # dbpedia
+	pair:image
+  ) .
+
+semforms:form-Document
+  a form:specification ;
+  form:classDomain pair:Document ;
+  rdfs:label "document PAIR"@fr ;
+  rdfs:label "PAIR document"@en ;
+  form:showProperties (
+	pair:preferedLabel # txt
+	pair:alternativeLabel # txt
+	#pair:subjectIdentifier # txt
+	pair:description # txt
+	pair:comment # txt
+	pair:aboutPage # url
+	pair:homePage # url
+	pair:hasType # sf (doc type)
+	pair:represents # sf (all)
+	pair:documents # sf all
+	pair:references # sf (doc) 
+	pair:referencesBy #sf (doc)
+	pair:subjectOf_Pair
+	pair:internal_author
+	pair:internal_contributor
+	pair:format
+	pair:language
+	pair:licence
+	pair:publicationDate
+	pair:source
+	pair:version
+  ) .
+semforms:form-DocumentType
+  a form:specification ;
+  form:classDomain pair:DocumentType ;
+  rdfs:label "Type de Document PAIR"@fr ;
+  rdfs:label "PAIR Document type"@en ;
+  form:showProperties (
+	pair:preferedLabel # txt
+	pair:alternativeLabel # txt
+	#pair:subjectIdentifier # txt
+	pair:description # txt
+	pair:comment # txt
+	pair:aboutPage # url
+	pair:homePage # url
+	pair:typeOf # sf (doc)
+  ) .
