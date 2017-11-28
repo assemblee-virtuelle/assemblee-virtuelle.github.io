@@ -211,6 +211,6 @@ semforms:form-Address
   form:showProperties (
 	pair:preferedLabel # txt
 	pair:latitude # txt
-	pair:logitude # txt
+	pair:longitude # txt
 	pair:localizes
   ) .
