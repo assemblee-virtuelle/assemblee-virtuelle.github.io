@@ -41,6 +41,7 @@ semforms:form-Person
 	pair:brainstorms # sf (proposition)
 	pair:affiliatedTo # sf (orga)
 	pair:image
+	pair:adress
 ) .
 
 semforms:form-Organization
@@ -76,6 +77,7 @@ semforms:form-Organization
 	pair:hasInterest # dbpedia
 	pair:brainstorms# sf (proposition)
 	pair:image
+	pair:adress
 ) .
 
 semforms:form-Project
@@ -133,6 +135,7 @@ semforms:form-Event
 	#temp
 	pair:hasFloor
 	pair:hasRoom
+	pair:adress
   ) .
 
 
