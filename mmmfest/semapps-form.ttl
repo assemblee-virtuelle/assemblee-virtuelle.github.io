@@ -30,6 +30,7 @@ semforms:form-Person
 	pair:hasSubject # ?
 	pair:subjectOf_Pair # ?
 	pair:knows # sf ( person )
+	pair:employedBy
 	pair:memberOf # sf ( orga)
 	pair:responsibleOf # sf ( orga )
 	pair:involvedIn # sf (projet)
