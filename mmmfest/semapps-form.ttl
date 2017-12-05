@@ -219,15 +219,3 @@ semforms:form-DocumentType
 	pair:homePage # url
 	pair:typeOf # sf (doc)
   ) .
-
-semforms:form-Address
-  a form:specification ;
-  form:classDomain pair:Address ;
-  rdfs:label "Adresse PAIR"@fr ;
-  rdfs:label "PAIR Address"@en ;
-  form:showProperties (
-	pair:preferedLabel # txt
-	pair:latitude # txt
-	pair:longitude # txt
-	pair:localizes
-  ) .
