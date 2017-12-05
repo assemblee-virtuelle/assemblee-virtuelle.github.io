@@ -42,6 +42,9 @@ semforms:form-Person
 	pair:affiliatedTo # sf (orga)
 	pair:image
 	pair:adress
+	pair:internal_author
+	pair:internal_contributor
+	pair:internal_publisher
 ) .
 
 semforms:form-Organization
@@ -78,6 +81,9 @@ semforms:form-Organization
 	pair:brainstorms# sf (proposition)
 	pair:image
 	pair:adress
+	pair:internal_author
+	pair:internal_contributor
+	pair:internal_publisher	  
 ) .
 
 semforms:form-Project
@@ -96,7 +102,7 @@ semforms:form-Project
 	pair:concretizes # sf (proposition)
 	pair:managedBy # sf (person,orga)
 	pair:representedBy # sf (doc)
-	  pair:offers # dbpedia
+	pair:offers # dbpedia
 	pair:needs # dbpedia
 	pair:involves  # sf (person,orga)
 	pair:documentedBy # sf (doc)
@@ -127,15 +133,17 @@ semforms:form-Event
 	pair:comment # txt
 	pair:documentedBy # sf (doc)
 	pair:hasSubject # dbpedia
+	pair:hasSubject_Pair
 	pair:subjectOf_Pair
 	pair:hasInterest # dbpedia
 	pair:organizedBy # sf (person,orga)
 	pair:hasParticipant # sf (person,orga)
 	pair:image
+	pair:adress
 	#temp
 	pair:hasFloor
 	pair:hasRoom
-	pair:adress
+
   ) .
 
 
@@ -181,8 +189,12 @@ semforms:form-Document
 	pair:references # sf (doc) 
 	pair:referencesBy #sf (doc)
 	pair:subjectOf_Pair
-	pair:internal_author
-	pair:internal_contributor
+	pair:internal_document_author
+	pair:internal_document_contributor
+	pair:external_document_author
+	pair:external_document_contributor
+	pair:external_document_publisher
+	pair:internal_document_publisher	
 	pair:format
 	pair:language
 	pair:licence
