@@ -112,7 +112,8 @@ semforms:form-Project
 	pair:subjectOf_Pair
 	#pair:subjectOf # ?
 	pair:hasInterest # dbpedia
-	pair:image
+	pair:image	
+	pair:adress
   ) .
 
 semforms:form-Event
