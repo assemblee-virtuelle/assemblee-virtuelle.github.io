@@ -21,6 +21,7 @@ semforms:form-Person
 	pair:alias # txt
 	pair:representedBy # img
 	pair:description # txt 
+	pair:comment # txt
 	pair:homePage # url
 	pair:aboutPage # url
 	pair:localizedBy # txt ( url )
@@ -43,6 +44,7 @@ semforms:form-Person
 	pair:affiliatedTo # sf (orga)
 	pair:image
 	pair:adress
+	pair:AdressLine2
 	pair:internal_author
 	pair:internal_contributor
 	pair:internal_publisher
@@ -82,6 +84,7 @@ semforms:form-Organization
 	pair:brainstorms# sf (proposition)
 	pair:image
 	pair:adress
+	pair:AdressLine2
 	pair:internal_author
 	pair:internal_contributor
 	pair:internal_publisher	  
@@ -114,6 +117,7 @@ semforms:form-Project
 	pair:hasInterest # dbpedia
 	pair:image	
 	pair:adress
+	pair:AdressLine2
   ) .
 
 semforms:form-Event
