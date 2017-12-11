@@ -44,7 +44,7 @@ semforms:form-Person
 	pair:affiliatedTo # sf (orga)
 	pair:image
 	pair:adress
-	pair:AdressLine2
+	pair:adressLine2
 	pair:internal_author
 	pair:internal_contributor
 	pair:internal_publisher
@@ -84,7 +84,7 @@ semforms:form-Organization
 	pair:brainstorms# sf (proposition)
 	pair:image
 	pair:adress
-	pair:AdressLine2
+	pair:adressLine2
 	pair:internal_author
 	pair:internal_contributor
 	pair:internal_publisher	  
@@ -117,7 +117,7 @@ semforms:form-Project
 	pair:hasInterest # dbpedia
 	pair:image	
 	pair:adress
-	pair:AdressLine2
+	pair:adressLine2
   ) .
 
 semforms:form-Event
