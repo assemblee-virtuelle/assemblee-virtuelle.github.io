@@ -48,6 +48,7 @@ semforms:form-Person
 	pair:internal_author
 	pair:internal_contributor
 	pair:internal_publisher
+	pair:Skill
 ) .
 
 semforms:form-Organization
@@ -87,7 +88,7 @@ semforms:form-Organization
 	pair:adressLine2
 	pair:internal_author
 	pair:internal_contributor
-	pair:internal_publisher	  
+	pair:internal_publisher
 ) .
 
 semforms:form-Project
