@@ -119,6 +119,7 @@ semforms:form-Project
 	pair:image	
 	pair:adress
 	pair:adressLine2
+	pair:hasType
   ) .
 
 semforms:form-Event
@@ -147,10 +148,8 @@ semforms:form-Event
 	pair:hasParticipant # sf (person,orga)
 	pair:image
 	pair:adress
-	#temp
-	pair:hasFloor
-	pair:hasRoom
-
+	pair:hasType
+	
   ) .
 
 
@@ -175,6 +174,7 @@ semforms:form-Proposal
 	pair:hasSubject_Pair
 	pair:hasInterest # dbpedia
 	pair:image
+	pair:hasType
   ) .
 
 semforms:form-Document
@@ -208,6 +208,8 @@ semforms:form-Document
 	pair:publicationDate
 	pair:source
 	pair:version
+	pair:hasInterest
+	pair:hasSubject
   ) .
 semforms:form-DocumentType
   a form:specification ;
@@ -223,4 +225,50 @@ semforms:form-DocumentType
 	pair:aboutPage # url
 	pair:homePage # url
 	pair:typeOf # sf (doc)
+  ) .
+
+semforms:form-ProjectType
+  a form:specification ;
+  form:classDomain pair:ProjectType ;
+  rdfs:label "Type de projet PAIR"@fr ;
+  rdfs:label "PAIR project type"@en ;
+  form:showProperties (
+	pair:preferedLabel # txt
+	pair:alternativeLabel # txt
+	#pair:subjectIdentifier # txt
+	pair:description # txt
+	pair:comment # txt
+	pair:aboutPage # url
+	pair:homePage # url
+	pair:typeOf # sf (project)
+  ) .
+semforms:form-EventType
+  a form:specification ;
+  form:classDomain pair:EventType ;
+  rdfs:label "Type d'evenement PAIR"@fr ;
+  rdfs:label "PAIR event type"@en ;
+  form:showProperties (
+	pair:preferedLabel # txt
+	pair:alternativeLabel # txt
+	#pair:subjectIdentifier # txt
+	pair:description # txt
+	pair:comment # txt
+	pair:aboutPage # url
+	pair:homePage # url
+	pair:typeOf # sf (event)
+  ) .
+semforms:form-ProposalType
+  a form:specification ;
+  form:classDomain pair:ProposalType ;
+  rdfs:label "Type de proposition PAIR"@fr ;
+  rdfs:label "PAIR proposal type"@en ;
+  form:showProperties (
+	pair:preferedLabel # txt
+	pair:alternativeLabel # txt
+	#pair:subjectIdentifier # txt
+	pair:description # txt
+	pair:comment # txt
+	pair:aboutPage # url
+	pair:homePage # url
+	pair:typeOf # sf (proposal)
   ) .
