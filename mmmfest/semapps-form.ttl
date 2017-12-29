@@ -89,6 +89,7 @@ semforms:form-Organization
 	pair:internal_author
 	pair:internal_contributor
 	pair:internal_publisher
+	pair:hasType
 ) .
 
 semforms:form-Project
@@ -271,4 +272,19 @@ semforms:form-ProposalType
 	pair:aboutPage # url
 	pair:homePage # url
 	pair:typeOf # sf (proposal)
+  ) .
+semforms:form-OrganizationType
+  a form:specification ;
+  form:classDomain pair:OrganizationType ;
+  rdfs:label "Type d'organization PAIR"@fr ;
+  rdfs:label "PAIR organization type"@en ;
+  form:showProperties (
+	pair:preferedLabel # txt
+	pair:alternativeLabel # txt
+	#pair:subjectIdentifier # txt
+	pair:description # txt
+	pair:comment # txt
+	pair:aboutPage # url
+	pair:homePage # url
+	pair:typeOf # sf (organization)
   ) .
