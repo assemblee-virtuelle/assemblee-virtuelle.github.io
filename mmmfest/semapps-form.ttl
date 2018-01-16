@@ -5,7 +5,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix semforms: <http://assemblee-virtuelle.github.io/mmmfest/semapps-form.ttl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
-
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 
 
 <> foaf:label "Formulaires semapps"@fr .
@@ -284,6 +284,20 @@ semforms:form-OrganizationType
 	#pair:subjectIdentifier # txt
 	pair:description # txt
 	pair:comment # txt
+	pair:aboutPage # url
+	pair:homePage # url
+	pair:typeOf # sf (organization)
+  ) .
+semforms:form-ComponentType
+  a form:specification ;
+  form:classDomain skos:Concept ;
+  rdfs:label "type SKOS"@fr ;
+  rdfs:label "SKOS type"@en ;
+  form:showProperties (
+	skos:preferedLabel # txt
+	pair:alternativeLabel # txt
+	skos:definition # txt
+	skos:notation # txt
 	pair:aboutPage # url
 	pair:homePage # url
 	pair:typeOf # sf (organization)
