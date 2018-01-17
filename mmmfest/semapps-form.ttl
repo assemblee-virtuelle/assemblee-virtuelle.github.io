@@ -294,7 +294,7 @@ semforms:form-ComponentType
   rdfs:label "type SKOS"@fr ;
   rdfs:label "SKOS type"@en ;
   form:showProperties (
-	skos:preferedLabel # txt
+	skos:prefLabel # txt
 	pair:alternativeLabel # txt
 	skos:definition # txt
 	skos:notation # txt
