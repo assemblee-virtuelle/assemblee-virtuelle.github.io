@@ -149,6 +149,7 @@ semforms:form-Event
 	pair:hasParticipant # sf (person,orga)
 	pair:image
 	pair:adress
+	pair:adressLine2
 	pair:hasType
 	
   ) .
