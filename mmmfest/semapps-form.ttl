@@ -289,16 +289,17 @@ semforms:form-OrganizationType
 	pair:homePage # url
 	pair:typeOf # sf (organization)
   ) .
-semforms:form-ComponentType
+semforms:form-ThesaurusType
   a form:specification ;
   form:classDomain skos:Concept ;
   rdfs:label "type SKOS"@fr ;
   rdfs:label "SKOS type"@en ;
   form:showProperties (
 	skos:prefLabel # txt
-	pair:alternativeLabel # txt
+	skos:altLabel
 	skos:definition # txt
 	skos:notation # txt
+	skos:hasTopConcept
 	pair:aboutPage # url
 	pair:homePage # url
 	pair:typeOf # sf (organization)
