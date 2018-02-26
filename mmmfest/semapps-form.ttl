@@ -157,7 +157,7 @@ semforms:form-Event
 	pair:hasType
 	pair:accessRead
 	pair:accessWrite
-	pair:isPublic*
+	pair:isPublic
 	pair:isProtected
   ) .
 
