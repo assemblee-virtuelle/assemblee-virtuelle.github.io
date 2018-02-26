@@ -124,6 +124,7 @@ semforms:form-Project
   	pair:accessRead
 	pair:accessWrite
 	pair:isPublic
+	pair:isProtected
   ) .
 
 semforms:form-Event
@@ -156,7 +157,8 @@ semforms:form-Event
 	pair:hasType
 	pair:accessRead
 	pair:accessWrite
-	pair:isPublic
+	pair:isPublic*
+	pair:isProtected
   ) .
 
 
@@ -185,6 +187,7 @@ semforms:form-Proposal
 	pair:accessRead
 	pair:accessWrite
 	pair:isPublic
+	pair:isProtected
   ) .
 
 semforms:form-Document
@@ -223,6 +226,7 @@ semforms:form-Document
 	pair:accessRead
 	pair:accessWrite
 	pair:isPublic
+	pair:isProtected
   ) .
 semforms:form-ThesaurusType
   a form:specification ;
