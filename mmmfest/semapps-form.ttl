@@ -121,6 +121,9 @@ semforms:form-Project
 	pair:adress
 	pair:adressLine2
 	pair:hasType
+  	pair:accessRead
+	pair:accessWrite
+	pair:isPublic
   ) .
 
 semforms:form-Event
@@ -151,7 +154,9 @@ semforms:form-Event
 	pair:adress
 	pair:adressLine2
 	pair:hasType
-	
+	pair:accessRead
+	pair:accessWrite
+	pair:isPublic
   ) .
 
 
@@ -177,6 +182,9 @@ semforms:form-Proposal
 	pair:hasInterest # dbpedia
 	pair:image
 	pair:hasType
+	pair:accessRead
+	pair:accessWrite
+	pair:isPublic
   ) .
 
 semforms:form-Document
@@ -212,82 +220,9 @@ semforms:form-Document
 	pair:version
 	pair:hasInterest
 	pair:hasSubject
-  ) .
-semforms:form-DocumentType
-  a form:specification ;
-  form:classDomain pair:DocumentType ;
-  rdfs:label "Type de Document PAIR"@fr ;
-  rdfs:label "PAIR Document type"@en ;
-  form:showProperties (
-	pair:preferedLabel # txt
-	pair:alternativeLabel # txt
-	#pair:subjectIdentifier # txt
-	pair:description # txt
-	pair:comment # txt
-	pair:aboutPage # url
-	pair:homePage # url
-	pair:typeOf # sf (doc)
-  ) .
-
-semforms:form-ProjectType
-  a form:specification ;
-  form:classDomain pair:ProjectType ;
-  rdfs:label "Type de projet PAIR"@fr ;
-  rdfs:label "PAIR project type"@en ;
-  form:showProperties (
-	pair:preferedLabel # txt
-	pair:alternativeLabel # txt
-	#pair:subjectIdentifier # txt
-	pair:description # txt
-	pair:comment # txt
-	pair:aboutPage # url
-	pair:homePage # url
-	pair:typeOf # sf (project)
-  ) .
-semforms:form-EventType
-  a form:specification ;
-  form:classDomain pair:EventType ;
-  rdfs:label "Type d'evenement PAIR"@fr ;
-  rdfs:label "PAIR event type"@en ;
-  form:showProperties (
-	pair:preferedLabel # txt
-	pair:alternativeLabel # txt
-	#pair:subjectIdentifier # txt
-	pair:description # txt
-	pair:comment # txt
-	pair:aboutPage # url
-	pair:homePage # url
-	pair:typeOf # sf (event)
-  ) .
-semforms:form-ProposalType
-  a form:specification ;
-  form:classDomain pair:ProposalType ;
-  rdfs:label "Type de proposition PAIR"@fr ;
-  rdfs:label "PAIR proposal type"@en ;
-  form:showProperties (
-	pair:preferedLabel # txt
-	pair:alternativeLabel # txt
-	#pair:subjectIdentifier # txt
-	pair:description # txt
-	pair:comment # txt
-	pair:aboutPage # url
-	pair:homePage # url
-	pair:typeOf # sf (proposal)
-  ) .
-semforms:form-OrganizationType
-  a form:specification ;
-  form:classDomain pair:OrganizationType ;
-  rdfs:label "Type d'organization PAIR"@fr ;
-  rdfs:label "PAIR organization type"@en ;
-  form:showProperties (
-	pair:preferedLabel # txt
-	pair:alternativeLabel # txt
-	#pair:subjectIdentifier # txt
-	pair:description # txt
-	pair:comment # txt
-	pair:aboutPage # url
-	pair:homePage # url
-	pair:typeOf # sf (organization)
+	pair:accessRead
+	pair:accessWrite
+	pair:isPublic
   ) .
 semforms:form-ThesaurusType
   a form:specification ;
