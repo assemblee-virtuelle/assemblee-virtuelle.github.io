@@ -243,3 +243,23 @@ semforms:form-ThesaurusType
 	pair:homePage # url
 	pair:typeOf # sf (organization)
   ) .
+semforms:form-Good
+	a form:specification ;
+	form:classDomain pair:Good ;
+	rdfs:label "bien PAIR"@fr ;
+	rdfs:label "PAIR good"@en ;
+	form:showProperties (
+		pair:preferedLabel
+		pair:alternativeLabel
+		pair:homePage
+		pair:aboutPage
+		pair:description
+		pair:image
+		pair:adress
+		pair:comment
+		pair:subjectIdentifier
+		pair:offers
+		pair:needs
+		pair:offeredBy
+		pair:neededBy
+	).
