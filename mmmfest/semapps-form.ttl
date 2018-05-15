@@ -255,7 +255,7 @@ semforms:form-Good
 		pair:aboutPage
 		pair:description
 		pair:image
-		pair:adress
+		pair:address
 		pair:comment
 		pair:subjectIdentifier
 		pair:offers
