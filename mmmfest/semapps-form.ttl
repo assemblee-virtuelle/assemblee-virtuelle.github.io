@@ -257,7 +257,6 @@ semforms:form-Good
 		pair:image
 		pair:adress
 		pair:comment
-		pair:subjectIdentifier
 		pair:offers
 		pair:needs
 		pair:offeredBy
