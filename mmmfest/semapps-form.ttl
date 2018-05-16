@@ -257,8 +257,7 @@ semforms:form-Good
 		pair:image
 		pair:adress
 		pair:comment
-		pair:offers
-		pair:needs
+		pair:hasSubject # dbpedia
 		pair:offeredBy
 		pair:neededBy
 	).
