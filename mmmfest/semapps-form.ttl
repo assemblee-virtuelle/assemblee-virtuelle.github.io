@@ -49,6 +49,7 @@ semforms:form-Person
 	pair:internal_contributor
 	pair:internal_publisher
 	pair:Skill
+	pair:Good
 ) .
 
 semforms:form-Organization
@@ -90,6 +91,7 @@ semforms:form-Organization
 	pair:internal_contributor
 	pair:internal_publisher
 	pair:hasType
+	pair:Good
 ) .
 
 semforms:form-Project
