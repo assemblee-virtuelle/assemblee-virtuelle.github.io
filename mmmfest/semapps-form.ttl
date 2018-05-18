@@ -263,3 +263,22 @@ semforms:form-Good
 		pair:offeredBy
 		pair:neededBy
 	).
+
+semforms:form-Service
+	a form:specification ;
+	form:classDomain pair:Service ;
+	rdfs:label "Service PAIR"@fr ;
+	rdfs:label "PAIR service"@en ;
+	form:showProperties (
+		pair:preferedLabel
+		pair:alternativeLabel
+		pair:homePage
+		pair:aboutPage
+		pair:description
+		pair:image
+		pair:adress
+		pair:comment
+		pair:hasSubject # dbpedia
+		pair:offeredBy
+		pair:neededBy
+	).
