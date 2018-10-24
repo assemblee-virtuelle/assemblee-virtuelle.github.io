@@ -1,26 +1,35 @@
 [
     {
-        "server":"https://localhost:8443",
-        "planetList":[
-            "https://savincen.localhost:8443/PlanetList",
-            "https://simon.localhost:8443/listes/PlanetList",
-            "https://guillaume.localhost:8444/PlanetList"
-        ]
+        "server":{
+            "uri":"https://localhost:8443",
+            "label":"Server One",
+            "planetList":[
+                "https://savincen.localhost:8443/",
+                "https://simon.localhost:8443/",
+                "https://guillaume.localhost:8444/"
+            ]
+        }
     },
     {
-        "server":"https://localhost:8444",
-        "planetList":[
-            "https://savincen.localhost:8443/PlanetList",
-            "https://guillaume.localhost:8444/PlanetList",
-            "https://toto.localhost:8444/PlanetList"
-        ]
+        "server":{
+            "uri":"https://localhost:8444",
+            "label":"Server Two",
+            "planetList":[
+                "https://savincen.localhost:8443/",
+                "https://guillaume.localhost:8444/",
+                "https://toto.localhost:8444/"
+            ]
+        }
     },
     {
-        "server":"https://localhost:8445",
-        "planetList":[
-            "https://savincen.localhost:8443/PlanetList",
-            "https://simon.localhost:8443/listes/PlanetList",
-            "https://guillaume.localhost:8444/PlanetList"
-        ]
+        "server":{
+            "uri":"https://localhost:8445",
+            "label":"Server Three",
+            "planetList":[
+                "https://savincen.localhost:8443/",
+                "https://simon.localhost:8443/",
+                "https://guillaume.localhost:8444/"
+            ]
+        }
     }
 ]
