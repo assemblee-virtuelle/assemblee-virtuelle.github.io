@@ -1,7 +1,7 @@
 [
     {
         "uri":"https://localhost:8443",
-        "label":"Server One",
+        "label":"Server un",
         "planetList":[
             "https://savincen.localhost:8443/",
             "https://simon.localhost:8443/",
@@ -10,7 +10,7 @@
     },
     {
         "uri":"https://localhost:8444",
-        "label":"Server Two",
+        "label":"Server deux",
         "planetList":[
             "https://savincen.localhost:8443/",
             "https://guillaume.localhost:8444/",
@@ -19,7 +19,7 @@
     },
     {
         "uri":"https://localhost:8445",
-        "label":"Server Three",
+        "label":"Server trois",
         "planetList":[
             "https://savincen.localhost:8443/",
             "https://simon.localhost:8443/",
