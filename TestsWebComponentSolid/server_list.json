@@ -3,27 +3,18 @@
         "uri":"https://localhost:8443",
         "label":"Server un",
         "planetList":[
-            "https://savincen.localhost:8443/",
-            "https://simon.localhost:8443/",
-            "https://guillaume.localhost:8444/"
+            "https://samy.localhost:8443/",
+            "https://toto.localhost:8443/",
+            "https://alice.localhost:8444/"
         ]
     },
     {
         "uri":"https://localhost:8444",
         "label":"Server deux",
         "planetList":[
-            "https://savincen.localhost:8443/",
-            "https://guillaume.localhost:8444/",
-            "https://toto.localhost:8444/"
-        ]
-    },
-    {
-        "uri":"https://localhost:8445",
-        "label":"Server trois",
-        "planetList":[
-            "https://savincen.localhost:8443/",
-            "https://simon.localhost:8443/",
-            "https://guillaume.localhost:8444/"
+            "https://samy.localhost:8443/",
+            "https://toto.localhost:8443/",
+            "https://alice.localhost:8444/"
         ]
     }
 ]
