@@ -1,7 +1,7 @@
 [
     {
         "uri":"https://localhost:8443",
-        "label":"Server un",
+        "label":"Server local Samy",
         "planetList":[
             "https://samy.localhost:8443/",
             "https://toto.localhost:8443/",
@@ -10,7 +10,7 @@
     },
     {
         "uri":"https://localhost:8444",
-        "label":"Server deux",
+        "label":"Serveur local Samy bis",
         "planetList":[
             "https://samy.localhost:8443/",
             "https://toto.localhost:8443/",
